@@ -77,7 +77,7 @@ Se abrirá la ventana principal de la aplicación:
 
 ```
 ┌─────────────────────────────────────────┐
-│         OpenRocket → RocketPy           │
+│         OpenRocket -> RocketPy          │
 │                 CCTE                    │
 ├─────────────────────────────────────────┤
 │  [Seleccionar archivo .ork]             │
@@ -86,9 +86,9 @@ Se abrirá la ventana principal de la aplicación:
 │  Longitud:  [ _____ ]                   │
 │  Elevación: [ _____ ] m                 │
 │                                         │
-│  ☐ Usar Atmósfera Estándar (ISA)        │
+│  [ ] Usar Atmósfera Estándar (ISA)      │
 │                                         │
-│         [ ▶ Iniciar Simulación ]        │
+│         [ > Iniciar Simulación ]        │
 └─────────────────────────────────────────┘
 ```
 
