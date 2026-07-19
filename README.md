@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 OpenRocket → RocketPy CCTE
+# OpenRocket → RocketPy CCTE
 
 **Herramienta de conversión y simulación avanzada de cohetes**  
 *Desarrollada por el Club de Ciencias y Tecnologías Espaciales (CCTE)*
@@ -20,12 +20,12 @@
 
 La herramienta incluye:
 
-- 🗂️ **Carga de archivos `.ork`** directamente desde la interfaz
-- 🌍 **Selección de coordenadas geográficas** de lanzamiento (latitud, longitud, elevación)
-- 🌤️ **Modelo atmosférico dinámico** via [Open-Meteo](https://open-meteo.com/) o Atmósfera Estándar ISA
-- ⚙️ **Generación automática** de Jupyter Notebooks con todos los parámetros del cohete
-- 📊 **Visualización integrada** de resultados de simulación en la misma ventana
-- 🌙 **Interfaz Light / Dark Mode** con estética iOS moderna
+- **Carga de archivos `.ork`** directamente desde la interfaz
+- **Selección de coordenadas geográficas** de lanzamiento (latitud, longitud, elevación)
+- **Modelo atmosférico dinámico** via [Open-Meteo](https://open-meteo.com/) o Atmósfera Estándar ISA
+- **Generación automática** de Jupyter Notebooks con todos los parámetros del cohete
+- **Visualización integrada** de resultados de simulación en la misma ventana
+- **Interfaz Light / Dark Mode** con estética moderna
 
 > **No se requiere instalar Python.** El ejecutable `rocketpy_ccte.exe` incluye todo lo necesario.
 
@@ -40,7 +40,7 @@ Antes de ejecutar la aplicación, asegúrate de tener instalado:
 | **Java**   | 17+            | [adoptium.net](https://adoptium.net/)       | Parsear archivos `.ork` de OpenRocket     |
 | **OpenRocket** | 22.02+     | [openrocket.info](https://openrocket.info/) | Diseñar y pre-simular el cohete           |
 
-> ⚠️ **Java es obligatorio.** Sin él, la conversión del archivo `.ork` fallará.  
+> **Nota:** Java es obligatorio. Sin él, la conversión del archivo `.ork` fallará.  
 > Verifica que esté instalado correctamente ejecutando `java -version` en una terminal.
 
 ---
@@ -51,7 +51,7 @@ Antes de ejecutar la aplicación, asegúrate de tener instalado:
 2. Coloca el ejecutable en una carpeta de tu elección (por ejemplo: `C:\Simulaciones\CCTE\`).
 3. ¡Listo! No es necesario instalar nada más.
 
-> 💡 La primera vez que lo ejecutes, Windows puede mostrar una advertencia de SmartScreen.  
+> **Importante:** La primera vez que lo ejecutes, Windows puede mostrar una advertencia de SmartScreen.  
 > Haz clic en **"Más información" → "Ejecutar de todas formas"** para continuar.
 
 ---
@@ -64,7 +64,7 @@ Antes de ejecutar la aplicación, asegúrate de tener instalado:
 2. Ve al menú **Simulaciones → Ejecutar todas las simulaciones**.
 3. Guarda el archivo con `Archivo → Guardar como` con extensión `.ork`.
 
-> 🔴 **Importante:** El archivo `.ork` **debe tener al menos una simulación ejecutada**.  
+> **Importante:** El archivo `.ork` **debe tener al menos una simulación ejecutada**.  
 > Sin esto, el serializador no puede extraer los datos de vuelo del cohete.
 
 ---
@@ -78,7 +78,7 @@ Se abrirá la ventana principal de la aplicación:
 ```
 ┌─────────────────────────────────────────┐
 │         OpenRocket → RocketPy           │
-│              CCTE  🚀                   │
+│                 CCTE                    │
 ├─────────────────────────────────────────┤
 │  [Seleccionar archivo .ork]             │
 │                                         │
@@ -112,7 +112,7 @@ Ingresa las coordenadas del sitio de lanzamiento:
 | **Longitud**| Coordenada este/oeste del sitio          | `-58.368`       |
 | **Elevación**| Altitud sobre el nivel del mar en metros | `25`            |
 
-> 🗺️ Puedes obtener las coordenadas exactas de tu sitio desde [Google Maps](https://maps.google.com) haciendo clic derecho en el punto deseado.
+> **Sugerencia:** Puedes obtener las coordenadas exactas de tu sitio desde [Google Maps](https://maps.google.com) haciendo clic derecho en el punto deseado.
 
 ---
 
@@ -133,11 +133,11 @@ Haz clic en **"▶ Iniciar Simulación"**.
 
 La aplicación realizará automáticamente:
 
-1. ✅ Extracción de parámetros del archivo `.ork`
-2. ✅ Generación del Jupyter Notebook con los datos del cohete
-3. ✅ Inyección de coordenadas geográficas y modelo atmosférico
-4. ✅ Ejecución de la simulación con RocketPy
-5. ✅ Visualización de los resultados en la ventana integrada
+1. Extracción de parámetros del archivo `.ork`
+2. Generación del Jupyter Notebook con los datos del cohete
+3. Inyección de coordenadas geográficas y modelo atmosférico
+4. Ejecución de la simulación con RocketPy
+5. Visualización de los resultados en la ventana integrada
 
 El progreso se mostrará en tiempo real en la barra de estado inferior.
 
@@ -262,6 +262,6 @@ abre un [Issue](https://github.com/DaniVillalba03/openrocket_to_rocketpy/issues)
 
 <div align="center">
 
-*Documentación — RocketPy CCTE v1.0 · Hecho con ❤️ para la comunidad aeroespacial estudiantil*
+*Documentación — RocketPy CCTE v1.0*
 
 </div>
