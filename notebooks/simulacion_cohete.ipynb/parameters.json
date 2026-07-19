@@ -1,0 +1,108 @@
+{
+    "elliptical_fins": {},
+    "environment": {
+        "base_pressure": null,
+        "base_temperature": null,
+        "date": null,
+        "elevation": 0.0,
+        "geodetic_method": "flat",
+        "latitude": 45.0,
+        "longitude": 0.0,
+        "wind_average": 2.0,
+        "wind_direction": 1.5707963267948966,
+        "wind_turbulence": 0.1
+    },
+    "flight": {
+        "heading": 90.0,
+        "inclination": 90.0,
+        "rail_length": 1.0
+    },
+    "id": {
+        "comment": "The shock cord does not need to be attached to anything in particular, as it functions only as a mass component.",
+        "designer": "Sampo Niskanen",
+        "filepath": "disenos/rocket.ork",
+        "rocket_name": "prueba"
+    },
+    "motors": {
+        "center_of_dry_mass_position": 0,
+        "coordinate_system_orientation": "combustion_chamber_to_nozzle",
+        "dry_inertia": [
+            0,
+            0,
+            0
+        ],
+        "dry_mass": 0,
+        "grain_density": 224.5572389303639,
+        "grain_initial_height": 0.07,
+        "grain_initial_inner_radius": 0.0045,
+        "grain_number": 1,
+        "grain_outer_radius": 0.009,
+        "grain_separation": 0,
+        "grains_center_of_mass_position": 0,
+        "nozzle_position": 0.035,
+        "nozzle_radius": 0.006749999999999999,
+        "position": 0.37199999999999933,
+        "throat_radius": 0.0045,
+        "thrust_source": ".\\notebooks\\simulacion_cohete.ipynb\\thrust_source.csv"
+    },
+    "nosecones": {
+        "base_radius": 0.0125,
+        "kind": "ogive",
+        "length": 0.1,
+        "name": "Nose cone",
+        "position": 0.0
+    },
+    "parachutes": {
+        "0": {
+            "area": 0.07068583470577035,
+            "cd": 1.0,
+            "cds": 0.07068583470577035,
+            "deploy_altitude": null,
+            "deploy_delay": 0.0,
+            "deploy_event": "ejection",
+            "name": "Parachute"
+        }
+    },
+    "rail_buttons": {},
+    "rocket": {
+        "center_of_mass_without_propellant": 0.242,
+        "coordinate_system_orientation": "nose_to_tail",
+        "drag_curve": ".\\notebooks\\simulacion_cohete.ipynb\\drag_curve.csv",
+        "inertia": [
+            0.000974,
+            0.000974,
+            9.895e-06
+        ],
+        "mass": 0.062,
+        "radius": 0.0125
+    },
+    "stored_results": {
+        "burnout_stability_margin": 2.946,
+        "flight_time": 15.849,
+        "ground_hit_velocity": 4.633,
+        "launch_rod_velocity": 15.365,
+        "max_acceleration": 143.641,
+        "max_altitude": 50.436,
+        "max_mach": 0.086,
+        "max_stability_margin": 3.302,
+        "max_thrust": 9.73,
+        "max_velocity": 29.209,
+        "min_stability_margin": 0.0,
+        "time_to_apogee": 3.476
+    },
+    "tails": {},
+    "trapezoidal_fins": {
+        "0": {
+            "cant_angle": 0.0,
+            "name": "Trapezoidal fin set",
+            "number": 3,
+            "position": 0.259,
+            "root_chord": 0.0508,
+            "section": "rounded",
+            "span": 0.03,
+            "sweep_angle": null,
+            "sweep_length": 0.0254,
+            "tip_chord": 0.0508
+        }
+    }
+}

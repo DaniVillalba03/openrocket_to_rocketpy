@@ -1,0 +1,354 @@
+from rocketpy import Environment, SolidMotor, Rocket, Flight, TrapezoidalFins, EllipticalFins, RailButtons, NoseCone, Tail, Parachute
+import datetime
+
+
+from rocketpy import Environment
+import datetime
+import requests
+import math
+
+# ==========================================
+# 1. BLOQUE DE CONFIGURACION (EXTRAIDO DEL .ORK)
+# ==========================================
+# Estas coordenadas fueron extraidas directamente de tu archivo OpenRocket
+LATITUD = 21.90795
+LONGITUD = 48.96156
+ELEVACION = 495.0
+
+# ==========================================
+# 2. MOTOR ATMOSFERICO (AUTOMATIZADO)
+# ==========================================
+env = Environment(latitude=LATITUD, longitude=LONGITUD, elevation=ELEVACION)
+
+try:
+    # Peticion a Open-Meteo (Sin API Key, alta disponibilidad)
+    url = f'https://api.open-meteo.com/v1/forecast?latitude={LATITUD}&longitude={LONGITUD}&current=temperature_2m,surface_pressure,wind_speed_10m,wind_direction_10m'
+    response = requests.get(url, timeout=5)
+    response.raise_for_status()
+    datos = response.json()['current']
+    
+    # Calculo de componentes de viento (Open-Meteo usa direccion meteorologica: origen del viento)
+    wind_speed = datos['wind_speed_10m']
+    wind_dir = datos['wind_direction_10m']
+    angle_rad = math.radians(270 - wind_dir)
+    wind_u = wind_speed * math.cos(angle_rad)  # Viento hacia el Este
+    wind_v = wind_speed * math.sin(angle_rad)  # Viento hacia el Norte
+    
+    # Inyeccion de datos reales al entorno
+    # (Conversion de hPa a Pa para la presion)
+    env.set_atmospheric_model(
+        type='custom_atmosphere',
+        pressure=datos['surface_pressure'] * 100,
+        temperature=datos['temperature_2m'] + 273.15,
+        wind_u=wind_u,
+        wind_v=wind_v
+    )
+    print(f'[OK] Clima real descargado. Viento: {wind_speed}m/s desde {wind_dir} grados.')
+
+except Exception as e:
+    # Contingencia: Falla de red o servidor
+    print(f'[ADVERTENCIA] No se pudo obtener el clima en tiempo real ({e}).')
+    print('[SISTEMA] Cargando Atmosfera Estandar Internacional de contingencia...')
+    env.set_atmospheric_model(type='standard_atmosphere')
+
+env.all_info()
+
+
+motor = SolidMotor(
+    thrust_source='thrust_source.csv',
+    dry_mass=0,
+    dry_inertia=[0.001, 0.001, 0.001],
+    center_of_dry_mass_position=0,
+    grains_center_of_mass_position=0,
+    grain_number=1,
+    grain_density=1292.6590331104403,
+    grain_outer_radius=0.0508,
+    grain_initial_inner_radius=0.0254,
+    grain_initial_height=0.65,
+    grain_separation=0,
+    nozzle_radius=0.038099999999999995,
+    nozzle_position=0.325,
+    throat_radius=0.0254,
+    reshape_thrust_curve=False,  # Not implemented in Rocket-Serializer
+    interpolation_method='linear',
+    coordinate_system_orientation='combustion_chamber_to_nozzle',
+)
+
+
+motor.all_info()
+
+
+nosecone = NoseCone(
+    length=0.3,
+    kind='lvhaack',
+    base_radius=0.054,
+    rocket_radius=0.054,
+    name='0.3',
+)
+
+
+trapezoidal_fins = {}
+
+
+trapezoidal_fins[0] = TrapezoidalFins(
+    n=4,
+    root_chord=0.22,
+    tip_chord=0.12,
+    span=0.12,
+    cant_angle=0.0,
+    sweep_length= 0.2078460969082652,
+    sweep_angle= None,
+    rocket_radius=0.054,
+    name='Trapezoidal Fin Set',
+)
+
+
+
+tails = {}
+
+
+parachutes = {}
+
+
+parachutes = {}
+parachutes[0] = Parachute(
+    name='Iris Ultra Compact Parachute [Cd 2.2 (8.8 oz) 49.0 in^3]',
+    cd_s=5.779,
+    trigger='apogee',
+    sampling_rate=100, 
+)
+
+
+rocket = Rocket(
+    radius=0.054,
+    mass=15.232,
+    inertia=[3.83, 3.83, 0.028],
+    power_off_drag='drag_curve.csv',
+    power_on_drag='drag_curve.csv',
+    center_of_mass_without_motor=1.272,
+    coordinate_system_orientation='nose_to_tail',
+)
+
+
+# ============================================================
+# CCTE: Extracción Geométrica Dinámica del .ork
+# Calcula posiciones absolutas en tiempo de ejecución.
+# ============================================================
+import sys, os
+
+# Resolver ruta raíz robustamente (buscando la carpeta 'scripts')
+_root = os.getcwd()
+while not os.path.exists(os.path.join(_root, 'scripts')) and _root != os.path.dirname(_root):
+    _root = os.path.dirname(_root)
+
+sys.path.append(os.path.join(_root, 'scripts'))
+from ork_geometry import OrkGeometry
+
+_ork_path = os.path.join(_root, 'disenos', 'cohete.ork')
+if os.path.exists(_ork_path):
+    geo = OrkGeometry(_ork_path)
+    FIN_POSITION_ABSOLUTE = geo.first_fin_set.fin_leading_edge if geo.first_fin_set else 0.0
+    print(f'Geometría dinámica cargada. Aletas en: {FIN_POSITION_ABSOLUTE:.4f}m desde la nariz')
+else:
+    print('Advertencia: cohete.ork no encontrado.')
+    FIN_POSITION_ABSOLUTE = 0.0
+
+
+rocket.add_surfaces(surfaces=[nosecone, trapezoidal_fins[0]], positions=[0.0, FIN_POSITION_ABSOLUTE])
+
+rocket.add_motor(motor, position= 1.7776384811117631)
+
+
+rocket.parachutes = list(parachutes.values())
+
+
+# No se agregaron botones de riel al cohete.
+
+### Informacion del Cohete
+rocket.all_info()
+
+
+flight = Flight(
+    rocket=rocket,
+    environment=env,
+    rail_length=6.0,
+    inclination=80.0,
+    heading=90.0,
+    terminate_on_apogee=False,
+    max_time=600,
+)
+
+import io
+from contextlib import redirect_stdout
+
+# Capturar salida de flight.all_info()
+f_out = io.StringIO()
+with redirect_stdout(f_out):
+    flight.all_info()
+
+out_str = f_out.getvalue()
+print(out_str)  # Mantener salida visible en consola
+
+# Guardar silenciosamente en archivo de texto en la raiz del proyecto
+with open('../../reporte_mision_urgente.txt', 'w', encoding='utf-8') as f:
+    f.write(out_str)
+print('\n[SISTEMA] Reporte tecnico guardado exitosamente en reporte_mision_urgente.txt')
+
+
+### Parametros: OpenRocket vs RocketPy
+time_to_apogee_ork = 24.765
+time_to_apogee_rpy = flight.apogee_time
+print(f"Tiempo hasta el apogeo (OpenRocket): {time_to_apogee_ork:.3f} s")
+print(f"Tiempo hasta el apogeo (RocketPy):   {time_to_apogee_rpy:.3f} s")
+apogee_difference = time_to_apogee_rpy - time_to_apogee_ork
+error = abs((apogee_difference)/ (time_to_apogee_rpy if time_to_apogee_rpy != 0 else 1e-9)) * 100
+print(f"Tiempo hasta el apogeo (diferencia):   {error:.3f} %")
+print()
+
+flight_time_ork = 51.565
+flight_time_rpy = flight.t_final
+print(f"Tiempo de vuelo (OpenRocket): {flight_time_ork:.3f} s")
+print(f"Tiempo de vuelo (RocketPy):   {flight_time_rpy:.3f} s")
+flight_time_difference = flight_time_rpy - flight_time_ork
+error_flight_time = abs((flight_time_difference)/ (flight_time_rpy if flight_time_rpy != 0 else 1e-9)) * 100
+print(f"Tiempo de vuelo (diferencia):   {error_flight_time:.3f} %")
+print()
+
+ground_hit_velocity_ork = -194.094
+ground_hit_velocity_rpy = flight.impact_velocity
+print(f"Velocidad de impacto (OpenRocket): {ground_hit_velocity_ork:.3f} m/s")
+print(f"Velocidad de impacto (RocketPy):   {ground_hit_velocity_rpy:.3f} m/s")
+ground_hit_velocity_difference = ground_hit_velocity_rpy - ground_hit_velocity_ork
+error_ground_hit_velocity = abs((ground_hit_velocity_difference)/ (ground_hit_velocity_rpy if ground_hit_velocity_rpy != 0 else 1e-9)) * 100
+print(f"Velocidad de impacto (diferencia):   {error_ground_hit_velocity:.3f} %")
+print()
+
+launch_rod_velocity_ork = 28.903
+launch_rod_velocity_rpy = flight.out_of_rail_velocity
+print(f"Velocidad de salida del riel (OpenRocket): {launch_rod_velocity_ork:.3f} m/s")
+print(f"Velocidad de salida del riel (RocketPy):   {launch_rod_velocity_rpy:.3f} m/s")
+launch_rod_velocity_difference = launch_rod_velocity_rpy - launch_rod_velocity_ork
+error_launch_rod_velocity = abs((launch_rod_velocity_difference)/ (launch_rod_velocity_rpy if launch_rod_velocity_rpy != 0 else 1e-9)) * 100
+print(f"Velocidad de salida del riel (diferencia):   {error_launch_rod_velocity:.3f} %")
+print()
+
+max_acceleration_ork = 86.368
+max_acceleration_rpy = flight.max_acceleration
+print(f"Aceleracion maxima (OpenRocket): {max_acceleration_ork:.3f} m/s²")
+print(f"Aceleracion maxima (RocketPy):   {max_acceleration_rpy:.3f} m/s²")
+max_acceleration_difference = max_acceleration_rpy - max_acceleration_ork
+error_max_acceleration = abs((max_acceleration_difference)/ (max_acceleration_rpy if max_acceleration_rpy != 0 else 1e-9)) * 100
+print(f"Aceleracion maxima (diferencia):   {error_max_acceleration:.3f} %")
+print()
+
+max_altitude_ork = 3004.077
+max_altitude_rpy = flight.apogee - flight.env.elevation
+print(f"Altitud maxima (OpenRocket): {max_altitude_ork:.3f} m")
+print(f"Altitud maxima (RocketPy):   {max_altitude_rpy:.3f} m")
+max_altitude_difference = max_altitude_rpy - max_altitude_ork
+error_max_altitude = abs((max_altitude_difference)/ (max_altitude_rpy if max_altitude_rpy != 0 else 1e-9)) * 100
+print(f"Altitud maxima (diferencia):   {error_max_altitude:.3f} %")
+print()
+
+max_mach_ork = 0.86
+max_mach_rpy = flight.max_mach_number 
+print(f"Mach maximo (OpenRocket): {max_mach_ork:.3f}")
+print(f"Mach maximo (RocketPy):   {max_mach_rpy:.3f}")
+max_mach_difference = max_mach_rpy - max_mach_ork
+error_max_mach = abs((max_mach_difference)/ (max_mach_rpy if max_mach_rpy != 0 else 1e-9)) * 100
+print(f"Mach maximo (diferencia):   {error_max_mach:.3f} %")
+print()
+
+max_velocity_ork = 288.694
+max_velocity_rpy = flight.max_speed
+print(f"Velocidad maxima (OpenRocket): {max_velocity_ork:.3f} m/s")
+print(f"Velocidad maxima (RocketPy):   {max_velocity_rpy:.3f} m/s")
+max_velocity_difference = max_velocity_rpy - max_velocity_ork
+error_max_velocity = abs((max_velocity_difference)/ (max_velocity_rpy if max_velocity_rpy != 0 else 1e-9)) * 100
+print(f"Velocidad maxima (diferencia):   {error_max_velocity:.3f} %")
+print()
+
+max_thrust_ork = 1747.953
+max_thrust_rpy = flight.rocket.motor.thrust.max
+print(f"Empuje maximo (OpenRocket): {max_thrust_ork:.3f} N")
+print(f"Empuje maximo (RocketPy):   {max_thrust_rpy:.3f} N")
+max_thrust_difference = max_thrust_rpy - max_thrust_ork
+error_max_thrust = abs((max_thrust_difference)/ (max_thrust_rpy if max_thrust_rpy != 0 else 1e-9)) * 100
+print(f"Empuje maximo (diferencia):   {error_max_thrust:.3f} %")
+print()
+
+burnout_stability_margin_ork = 3.346
+burnout_stability_margin_rpy = flight.stability_margin(flight.rocket.motor.burn_out_time)
+print(f"Margen de estabilidad (Burnout) (OpenRocket): {burnout_stability_margin_ork:.3f}")
+print(f"Margen de estabilidad (Burnout) (RocketPy):   {burnout_stability_margin_rpy:.3f}")
+burnout_stability_margin_difference = burnout_stability_margin_rpy - burnout_stability_margin_ork
+error_burnout_stability_margin = abs((burnout_stability_margin_difference)/ (burnout_stability_margin_rpy if burnout_stability_margin_rpy != 0 else 1e-9)) * 100
+print(f"Margen de estabilidad (Burnout) (diferencia):   {error_burnout_stability_margin:.3f} %")
+print()
+
+max_stability_margin_ork = 3.51
+max_stability_margin_rpy = flight.max_stability_margin
+print(f"Margen de estabilidad maximo (OpenRocket): {max_stability_margin_ork:.3f}")
+print(f"Margen de estabilidad maximo (RocketPy):   {max_stability_margin_rpy:.3f}")
+max_stability_margin_difference = max_stability_margin_rpy - max_stability_margin_ork
+error_max_stability_margin = abs((max_stability_margin_difference)/ (max_stability_margin_rpy if max_stability_margin_rpy != 0 else 1e-9)) * 100
+print(f"Margen de estabilidad maximo (diferencia):   {error_max_stability_margin:.3f} %")
+print()
+
+min_stability_margin_ork = 1.301
+min_stability_margin_rpy = flight.min_stability_margin
+print(f"Margen de estabilidad minimo (OpenRocket): {min_stability_margin_ork:.3f}")
+print(f"Margen de estabilidad minimo (RocketPy):   {min_stability_margin_rpy:.3f}")
+min_stability_margin_difference = min_stability_margin_rpy - min_stability_margin_ork
+error_min_stability_margin = abs((min_stability_margin_difference)/ (min_stability_margin_rpy if min_stability_margin_rpy != 0 else 1e-9)) * 100
+print(f"Margen de estabilidad minimo (diferencia):   {error_min_stability_margin:.3f} %")
+print()
+
+
+
+flight.info()
+flight.plots.linear_kinematics_data()
+flight.plots.trajectory_3d()
+
+# ==========================================
+# MODULO DE RECUPERACION Y TELEMETRIA
+# ==========================================
+import os
+from rocketpy.simulation.flight_data_exporter import FlightDataExporter
+
+# Asegurar existencia del directorio de resultados en la raiz del proyecto
+os.makedirs('../../resultados', exist_ok=True)
+
+# 1. Extraccion de coordenadas de impacto
+impact_lat = flight.latitude(flight.t_final)
+impact_lon = flight.longitude(flight.t_final)
+print(f"\n[SISTEMA] Coordenada de Impacto Prevista: {impact_lat:.6f}, {impact_lon:.6f}")
+
+# Instanciar exportador (RocketPy v1.12+)
+exporter = FlightDataExporter(flight)
+
+# 2. Exportacion KML para Google Earth
+exporter.export_kml(
+    file_name="../../resultados/trayectoria_operativa.kml",
+    extrude=True,
+    altitude_mode="relative_to_ground"
+)
+print("[SISTEMA] Archivo KML generado en /resultados para visualizacion espacial.")
+
+# 3. Exportacion de la matriz balistica a CSV
+exporter.export_data(
+    "../../resultados/datos_telemetria_simulada.csv",
+    "z", "vz", "az", "mach_number"
+)
+print("[SISTEMA] Matriz de vuelo exportada a CSV en /resultados con exito.")
+
+# 4. Reporte de Recuperacion
+print('\n[SISTEMA] --- REPORTE DE RECUPERACION ---')
+for event in flight.parachute_events:
+    trigger_time = event[0]
+    parachute = event[1]
+    trigger_z = flight.z(trigger_time)
+    trigger_agl = trigger_z - env.elevation
+    print(f'Paracaidas: {parachute.name} | Tiempo: {trigger_time:.2f} s | Altitud AGL: {trigger_agl:.2f} m')
+print('-------------------------------------------')
+

@@ -1,0 +1,612 @@
+<?xml version='1.0' encoding='utf-8'?>
+<openrocket version="1.10" creator="OpenRocket 24.12">
+  <rocket>
+    <name>prueba</name>
+    <id>13fcc99a-97af-4285-a18b-3748b018fbdf</id>
+    <axialoffset method="absolute">0.0</axialoffset>
+    <position type="absolute">0.0</position>
+    <designer>Sampo Niskanen</designer>
+    <designtype>original</designtype>
+    <motorconfiguration configid="da326836-0959-4c94-bcd5-49dee07235a4">
+      <stage number="0" active="true"/>
+    </motorconfiguration>
+    <motorconfiguration configid="05896b5a-71a7-48ac-b7ae-eadeb267975b">
+      <stage number="0" active="true"/>
+    </motorconfiguration>
+    <motorconfiguration configid="b13e8ca2-f54d-4ca8-9b23-06c6c9eb237a">
+      <stage number="0" active="true"/>
+    </motorconfiguration>
+    <motorconfiguration configid="e1dc7488-77c0-403a-b54f-c01db07aba2f" default="true">
+      <stage number="0" active="true"/>
+    </motorconfiguration>
+    <motorconfiguration configid="5d9a2765-395d-4d9c-9678-38eed0988c72">
+      <stage number="0" active="true"/>
+    </motorconfiguration>
+    <referencetype>maximum</referencetype>
+
+    <subcomponents>
+      <stage>
+        <name>Sustainer</name>
+        <id>51c9a60e-465f-40e8-8a10-aee9732aa47a</id>
+
+        <subcomponents>
+          <nosecone>
+            <name>Nose cone</name>
+            <id>f742413d-bf05-4ac6-ab04-0c410feebc08</id>
+            <appearance>
+              <paint red="51" green="51" blue="51" alpha="255"/>
+              <shine>0.5</shine>
+            </appearance>
+            <finish>normal</finish>
+            <material type="bulk" density="1050.0" group="Plastics">Polystyrene</material>
+            <length>0.1</length>
+            <thickness>0.002</thickness>
+            <shape>ogive</shape>
+            <shapeparameter>1.0</shapeparameter>
+            <aftradius>0.0125</aftradius>
+            <aftshoulderradius>0.0115</aftshoulderradius>
+            <aftshoulderlength>0.02</aftshoulderlength>
+            <aftshoulderthickness>0.002</aftshoulderthickness>
+            <aftshouldercapped>true</aftshouldercapped>
+            <isflipped>false</isflipped>
+          </nosecone>
+
+          <bodytube>
+            <name>Body tube</name>
+            <id>23676342-cab1-4180-bdc3-645af8cec2ca</id>
+            <appearance>
+              <paint red="212" green="185" blue="145" alpha="255"/>
+              <shine>0.5</shine>
+              <decal name="decals/BodyStripe.png" rotation="0.0" edgemode="CLAMP">
+                <center x="0.0" y="0.0"/>
+                <offset x="0.0" y="-0.2"/>
+                <scale x="1.0" y="10.0"/>
+              </decal>
+            </appearance>
+            <finish>normal</finish>
+            <material type="bulk" density="680.0" group="PaperProducts">Cardboard</material>
+            <length>0.3</length>
+            <thickness>0.001</thickness>
+            <radius>auto 0.0125</radius>
+
+            <subcomponents>
+              <parachute>
+                <name>Parachute</name>
+                <id>99a9ba6b-15ea-4c14-8ddc-a2b95453ff5c</id>
+                <axialoffset method="top">0.032</axialoffset>
+                <position type="top">0.032</position>
+                <packedlength>0.042</packedlength>
+                <packedradius>0.009000000000000001</packedradius>
+                <radialposition>0.0</radialposition>
+                <radialdirection>0.0</radialdirection>
+                <cd>auto</cd>
+                <material type="surface" density="0.067" group="Fabrics">Ripstop nylon</material>
+                <deployevent>ejection</deployevent>
+                <deployaltitude>200.0</deployaltitude>
+                <deploydelay>0.0</deploydelay>
+                <diameter>0.3</diameter>
+                <linecount>6</linecount>
+                <linelength>0.3</linelength>
+                <linematerial type="line" density="0.0018" group="Custom">Elastic cord (round 2mm, 1/16 in)</linematerial>
+              </parachute>
+
+              <shockcord>
+                <name>Shock cord</name>
+                <id>b3f082f4-52e0-4804-841d-d502f9b134e7</id>
+                <axialoffset method="top">0.02</axialoffset>
+                <position type="top">0.02</position>
+                <comment>The shock cord does not need to be attached to anything in particular, as it functions only as a mass component.</comment>
+                <packedlength>0.052000000000000005</packedlength>
+                <packedradius>0.006</packedradius>
+                <radialposition>0.0</radialposition>
+                <radialdirection>0.0</radialdirection>
+                <cordlength>0.4</cordlength>
+                <material type="line" density="0.0018" group="Custom">Elastic cord (round 2mm, 1/16 in)</material>
+              </shockcord>
+
+              <masscomponent>
+                <name>Wadding</name>
+                <id>9e56185b-6429-41e9-ab4d-7f869ee1a86b</id>
+                <axialoffset method="top">0.08</axialoffset>
+                <position type="top">0.08</position>
+                <packedlength>0.03</packedlength>
+                <packedradius>0.0115</packedradius>
+                <radialposition>0.0</radialposition>
+                <radialdirection>0.0</radialdirection>
+                <mass>0.002</mass>
+                <masscomponenttype>masscomponent</masscomponenttype>
+              </masscomponent>
+
+              <launchlug>
+                <name>Launch lug</name>
+                <id>1acfd7b9-e645-45da-8704-2e523297c942</id>
+                <instancecount>1</instancecount>
+                <instanceseparation>0.0</instanceseparation>
+                <angleoffset method="relative">19.0</angleoffset>
+                <radialdirection>19.0</radialdirection>
+                <axialoffset method="middle">0.0</axialoffset>
+                <position type="middle">0.0</position>
+                <finish>normal</finish>
+                <material type="bulk" density="680.0" group="PaperProducts">Cardboard</material>
+                <radius>0.0035</radius>
+                <length>0.035</length>
+                <thickness>0.001</thickness>
+              </launchlug>
+
+              <trapezoidfinset>
+                <name>Trapezoidal fin set</name>
+                <id>9acd3480-76fb-4d48-b203-ce394d8c3d8e</id>
+                <appearance>
+                  <paint red="255" green="254" blue="254" alpha="255"/>
+                  <shine>0.0</shine>
+                  <decal name="decals/TailStripe.png" rotation="0.0" edgemode="CLAMP">
+                    <center x="0.0" y="0.0"/>
+                    <offset x="0.0" y="-0.4"/>
+                    <scale x="1.0" y="2.499999999999999"/>
+                  </decal>
+                </appearance>
+                <instancecount>3</instancecount>
+                <fincount>3</fincount>
+                <radiusoffset method="surface">0.0</radiusoffset>
+                <angleoffset method="relative">0.0</angleoffset>
+                <rotation>0.0</rotation>
+                <axialoffset method="bottom">0.0</axialoffset>
+                <position type="bottom">0.0</position>
+                <finish>normal</finish>
+                <material type="bulk" density="680.0" group="PaperProducts">Cardboard</material>
+                <thickness>0.002</thickness>
+                <crosssection>rounded</crosssection>
+                <cant>0.0</cant>
+                <filletradius>0.0</filletradius>
+                <filletmaterial type="bulk" density="680.0" group="PaperProducts">Cardboard</filletmaterial>
+                <rootchord>0.0508</rootchord>
+                <tipchord>0.0508</tipchord>
+                <sweeplength>0.0254</sweeplength>
+                <height>0.03</height>
+              </trapezoidfinset>
+
+              <centeringring>
+                <name>Centering ring</name>
+                <id>1ad78625-8389-4894-8ba4-9d98209d57d7</id>
+                <instancecount>1</instancecount>
+                <instanceseparation>0.0</instanceseparation>
+                <axialoffset method="bottom">-0.045</axialoffset>
+                <position type="bottom">-0.045</position>
+                <comment>The centering ring automatically takes the outer diameter of the body tube and the inner diameter of the inner tube.</comment>
+                <material type="bulk" density="680.0" group="PaperProducts">Cardboard</material>
+                <length>0.002</length>
+                <radialposition>0.0</radialposition>
+                <radialdirection>0.0</radialdirection>
+                <outerradius>auto</outerradius>
+                <innerradius>auto</innerradius>
+              </centeringring>
+
+              <centeringring>
+                <name>Centering ring</name>
+                <id>a47c0331-7554-4bc9-80cc-490ef68aa4f5</id>
+                <appearance>
+                  <paint red="255" green="255" blue="255" alpha="255"/>
+                  <shine>0.0</shine>
+                </appearance>
+                <instancecount>1</instancecount>
+                <instanceseparation>0.0</instanceseparation>
+                <axialoffset method="bottom">0.0</axialoffset>
+                <position type="bottom">0.0</position>
+                <comment>The centering ring automatically takes the outer diameter of the body tube and the inner diameter of the inner tube.</comment>
+                <material type="bulk" density="680.0" group="PaperProducts">Cardboard</material>
+                <length>0.002</length>
+                <radialposition>0.0</radialposition>
+                <radialdirection>0.0</radialdirection>
+                <outerradius>auto</outerradius>
+                <innerradius>auto</innerradius>
+              </centeringring>
+
+              <innertube>
+                <name>Inner Tube</name>
+                <id>9c92077c-f74f-4c95-b6ab-0dc765a377e7</id>
+                <appearance>
+                  <paint red="0" green="0" blue="0" alpha="255"/>
+                  <shine>0.0</shine>
+                </appearance>
+                <axialoffset method="bottom">0.005</axialoffset>
+                <position type="bottom">0.005</position>
+                <material type="bulk" density="680.0" group="PaperProducts">Cardboard</material>
+                <length>0.075</length>
+                <radialposition>0.0</radialposition>
+                <radialdirection>0.0</radialdirection>
+                <outerradius>0.0095</outerradius>
+                <thickness>5.000000000000004E-4</thickness>
+                <clusterconfiguration>single</clusterconfiguration>
+                <clusterscale>1.0</clusterscale>
+                <clusterrotation>0.0</clusterrotation>
+                <motormount>
+                  <ignitionevent>automatic</ignitionevent>
+                  <ignitiondelay>0.0</ignitiondelay>
+                  <overhang>0.003</overhang>
+                  <motor configid="da326836-0959-4c94-bcd5-49dee07235a4">
+                    <type>single</type>
+                    <manufacturer>Estes</manufacturer>
+                    <digest>22aec01287ea1e3b8c6f66b26fe5fea6</digest>
+                    <designation>A8</designation>
+                    <diameter>0.018</diameter>
+                    <length>0.07</length>
+                    <delay>3.0</delay>
+                  </motor>
+                  <ignitionconfiguration configid="da326836-0959-4c94-bcd5-49dee07235a4">
+                    <ignitionevent>automatic</ignitionevent>
+                    <ignitiondelay>0.0</ignitiondelay>
+                  </ignitionconfiguration>
+                  <motor configid="05896b5a-71a7-48ac-b7ae-eadeb267975b">
+                    <type>single</type>
+                    <manufacturer>Estes</manufacturer>
+                    <digest>c15b9b96bf06e0ab896394787da3c47e</digest>
+                    <designation>B4</designation>
+                    <diameter>0.018</diameter>
+                    <length>0.07</length>
+                    <delay>4.0</delay>
+                  </motor>
+                  <ignitionconfiguration configid="05896b5a-71a7-48ac-b7ae-eadeb267975b">
+                    <ignitionevent>automatic</ignitionevent>
+                    <ignitiondelay>0.0</ignitiondelay>
+                  </ignitionconfiguration>
+                  <motor configid="b13e8ca2-f54d-4ca8-9b23-06c6c9eb237a">
+                    <type>single</type>
+                    <manufacturer>Estes</manufacturer>
+                    <digest>c8743ef3fa99e14a89885cbe0ead47b2</digest>
+                    <designation>C6</designation>
+                    <diameter>0.018</diameter>
+                    <length>0.07</length>
+                    <delay>3.0</delay>
+                  </motor>
+                  <ignitionconfiguration configid="b13e8ca2-f54d-4ca8-9b23-06c6c9eb237a">
+                    <ignitionevent>automatic</ignitionevent>
+                    <ignitiondelay>0.0</ignitiondelay>
+                  </ignitionconfiguration>
+                  <motor configid="e1dc7488-77c0-403a-b54f-c01db07aba2f">
+                    <type>single</type>
+                    <manufacturer>Estes</manufacturer>
+                    <digest>c8743ef3fa99e14a89885cbe0ead47b2</digest>
+                    <designation>C6</designation>
+                    <diameter>0.018</diameter>
+                    <length>0.07</length>
+                    <delay>5.0</delay>
+                  </motor>
+                  <ignitionconfiguration configid="e1dc7488-77c0-403a-b54f-c01db07aba2f">
+                    <ignitionevent>automatic</ignitionevent>
+                    <ignitiondelay>0.0</ignitiondelay>
+                  </ignitionconfiguration>
+                  <motor configid="5d9a2765-395d-4d9c-9678-38eed0988c72">
+                    <type>single</type>
+                    <manufacturer>Estes</manufacturer>
+                    <digest>c8743ef3fa99e14a89885cbe0ead47b2</digest>
+                    <designation>C6</designation>
+                    <diameter>0.018</diameter>
+                    <length>0.07</length>
+                    <delay>7.0</delay>
+                  </motor>
+                  <ignitionconfiguration configid="5d9a2765-395d-4d9c-9678-38eed0988c72">
+                    <ignitionevent>automatic</ignitionevent>
+                    <ignitiondelay>0.0</ignitiondelay>
+                  </ignitionconfiguration>
+                </motormount>
+
+                <subcomponents>
+                  <engineblock>
+                    <name>Engine block</name>
+                    <id>e2613fe3-cb14-4d73-ba98-a62f4ea723ec</id>
+                    <axialoffset method="top">0.002</axialoffset>
+                    <position type="top">0.002</position>
+                    <material type="bulk" density="680.0" group="PaperProducts">Cardboard</material>
+                    <length>0.005</length>
+                    <radialposition>0.0</radialposition>
+                    <radialdirection>0.0</radialdirection>
+                    <outerradius>auto</outerradius>
+                    <thickness>0.003</thickness>
+                  </engineblock>
+                </subcomponents>
+              </innertube>
+            </subcomponents>
+          </bodytube>
+        </subcomponents>
+      </stage>
+    </subcomponents>
+  </rocket>
+
+  <simulations>
+    <simulation status="uptodate">
+      <name>Simulation 1</name>
+      <simulator>RK4Simulator</simulator>
+      <calculator>BarrowmanCalculator</calculator>
+      <conditions>
+        <configid>da326836-0959-4c94-bcd5-49dee07235a4</configid>
+        <launchrodlength>1.0</launchrodlength>
+        <launchintowind>true</launchintowind>
+        <launchrodangle>0.0</launchrodangle>
+        <launchroddirection>90.0</launchroddirection>
+        <windaverage>2.0</windaverage>
+        <windturbulence>0.1</windturbulence>
+        <winddirection>1.5707963267948966</winddirection>
+        <wind model="average">
+          <speed>2.0</speed>
+          <direction>1.5707963267948966</direction>
+          <standarddeviation>0.2</standarddeviation>
+        </wind>
+        <wind model="multilevel" altituderef="msl">
+          <windlevel altitude="0.0" speed="3.8" direction="3.0892327760299634" standarddeviation="1.52"/>
+        </wind>
+        <windmodeltype>Average</windmodeltype>
+        <launchaltitude>0.0</launchaltitude>
+        <launchlatitude>45.0</launchlatitude>
+        <launchlongitude>0.0</launchlongitude>
+        <geodeticmethod>flat</geodeticmethod>
+        <atmosphere model="isa"/>
+        <timestep>0.05</timestep>
+        <maxtime>1200.0</maxtime>
+      </conditions>
+      <flightdata maxaltitude="50.436" maxvelocity="29.209" maxacceleration="143.641" maxmach="0.086" timetoapogee="3.476" flighttime="15.849" groundhitvelocity="4.633" launchrodvelocity="15.365" deploymentvelocity="2.738" optimumdelay="2.746">
+        <databranch name="Sustainer" optimumAltitude="50.436438923899665" timeToOptimumAltitude="3.4763279356152297" types="Time,Altitude,Altitude above sea level,Vertical velocity,Total velocity,Vertical acceleration,Total acceleration,Position East of launch,Position North of launch,Lateral distance,Lateral direction,Lateral velocity,Lateral acceleration,Latitude,Longitude,Angle of attack,Roll rate,Pitch rate,Yaw rate,Vertical orientation (zenith),Lateral orientation (azimuth),Mass,Motor mass,Longitudinal moment of inertia,Rotational moment of inertia,Gravitational acceleration,CP location,CG location,Stability margin calibers,Thrust,Thrust-to-weight ratio,Drag force,Drag coefficient,Friction drag coefficient,Pressure drag coefficient,Base drag coefficient,Axial drag coefficient,Normal force coefficient,Pitch moment coefficient,Yaw moment coefficient,Side force coefficient,Roll moment coefficient,Roll forcing coefficient,Roll damping coefficient,Pitch damping coefficient,Wind velocity,Wind direction,Air temperature,Air pressure,Air density,Speed of sound,Mach number,Reynolds number,Reference length,Reference area,Simulation time step,Computation time,Coriolis acceleration">
+          <event time="0" type="launch" id="38edcaaa-b173-492a-8f15-b3e296179294" source="13fcc99a-97af-4285-a18b-3748b018fbdf"/>
+          <event time="0" type="ignition" id="0d6e46ad-7d91-454d-82c1-13a633b5b26e" source="9c92077c-f74f-4c95-b6ab-0dc765a377e7"/>
+          <event time="0.105" type="liftoff" id="a52e0a0e-dd06-4d70-a5f5-c688ffde9bf6"/>
+          <event time="0.247" type="launchrod" id="5946bde1-a1ce-484d-b7df-b93329221e42"/>
+          <event time="0.73" type="burnout" id="71b61344-c8a0-4d6a-8877-26d3d9ebc565" source="9c92077c-f74f-4c95-b6ab-0dc765a377e7"/>
+          <event time="3.476" type="apogee" id="415c36e7-3df1-4726-beaa-c11c325630ec" source="13fcc99a-97af-4285-a18b-3748b018fbdf"/>
+          <event time="3.73" type="ejectioncharge" id="2f00332a-056e-4922-a5b6-fba922b188ea" source="51c9a60e-465f-40e8-8a10-aee9732aa47a"/>
+          <event time="3.731" type="recoverydevicedeployment" id="11448b0b-0aa3-4338-aa73-ac32da4b6429" source="99a9ba6b-15ea-4c14-8ddc-a2b95453ff5c"/>
+          <event time="15.849" type="groundhit" id="7fe29268-1a72-4b2b-85d7-da6dec66b3f5"/>
+          <event time="15.849" type="simulationend" id="64b8582e-7f49-49b9-be24-53995788b8f0"/>
+          <datapoint>0,0,0,0,0,0,0,0,0,0,0,0,0,45,0,1.571,0,0,0,1.571,0,0.065,0.016,0.001,1.001e-5,9.806,NaN,0.248,NaN,0,0,0,0.87,0.677,0.073,0.12,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.022,1.571,288.15,1.013e5,1.225,340.389,0.006,5.814e4,0.025,4.909e-4,0.01,0.022,0</datapoint>
+          <datapoint>0.01,0,0,0,0,0,0,0,0,0,0,0,0,45,0,1.571,0,0,0,1.571,0,0.065,0.016,0.001,1.001e-5,9.806,NaN,0.248,NaN,0.125,0.197,0,0.868,0.675,0.073,0.12,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.043,1.571,288.15,1.013e5,1.225,340.389,0.006,5.874e4,0.025,4.909e-4,0.01,0.026,0</datapoint>
+          <datapoint>0.02,0,0,0,0,0,0,0,0,0,0,0,0,45,0,1.571,0,0,0,1.571,0,0.065,0.016,0.001,1.001e-5,9.806,NaN,0.248,NaN,0.25,0.395,0,0.866,0.673,0.073,0.12,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.064,1.571,288.15,1.013e5,1.225,340.389,0.006,5.934e4,0.025,4.909e-4,0.01,0.028,0</datapoint>
+          <datapoint>0.03,0,0,0,0,0,0,0,0,0,0,0,0,45,0,1.571,0,0,0,1.571,0,0.064,0.016,0.001,1.001e-5,9.806,NaN,0.248,NaN,0.375,0.592,0,0.864,0.671,0.073,0.12,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.084,1.571,288.15,1.013e5,1.225,340.389,0.006,5.995e4,0.025,4.909e-4,0.011,0.03,0</datapoint>
+          <datapoint>0.041,0,0,0,0,0,0,0,0,0,0,0,0,45,0,1.571,0,0,0,1.571,0,0.064,0.016,0.001,1.001e-5,9.806,NaN,0.248,NaN,0.512,0.81,0,0.862,0.669,0.073,0.12,0,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.108,1.571,288.15,1.013e5,1.225,340.389,0.006,6.061e4,0.025,4.909e-4,0.01,0.032,0</datapoint>
+          <datapoint>0.051,3.414e-5,3.414e-5,0.013,0.013,3.917,3.919,-4.018e-6,0,4.018e-6,4.712,0.001,0.121,45,0,1.565,0,0,0,1.571,0,0.064,0.016,0.001,1.001e-5,9.806,NaN,0.248,NaN,0.885,1.399,0,0.861,0.668,0.073,0.12,5.362e-7,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.125,1.571,288.15,1.013e5,1.225,340.389,0.006,6.107e4,0.025,4.909e-4,0.01,0.033,0</datapoint>
+          <datapoint>0.061,4.6e-4,4.6e-4,0.081,0.081,9.704,9.705,-2.011e-5,0,2.011e-5,4.712,0.002,0.119,45,0,1.532,0,0,0,1.571,0,0.064,0.016,0.001,1.001e-5,9.806,NaN,0.248,NaN,1.258,1.99,1.634e-7,0.862,0.669,0.073,0.12,1.224e-4,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.108,1.571,288.15,1.013e5,1.225,340.389,0.006,6.061e4,0.025,4.909e-4,0.01,0.034,0</datapoint>
+          <datapoint>0.071,0.002,0.002,0.207,0.207,15.495,15.496,-4.813e-5,0,4.813e-5,4.712,0.003,0.118,45,0,1.472,0,0,0,1.571,0,0.064,0.016,0.001,1.001e-5,9.806,NaN,0.248,NaN,1.63,2.58,2.626e-6,0.863,0.67,0.073,0.12,0.002,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.091,1.571,288.15,1.013e5,1.225,340.389,0.006,6.035e4,0.025,4.909e-4,0.01,0.036,0</datapoint>
+          <datapoint>0.081,0.005,0.005,0.391,0.391,21.289,21.289,-8.798e-5,0,8.798e-5,4.712,0.005,0.118,45,0,1.384,0,0,0,1.571,0,0.064,0.016,0.001,1.001e-5,9.806,NaN,0.248,NaN,2.003,3.171,1.679e-5,0.862,0.669,0.073,0.12,0.013,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.075,1.571,288.15,1.013e5,1.225,340.389,0.006,6.059e4,0.025,4.909e-4,0.003,0.037,0</datapoint>
+          <datapoint>0.084,0.006,0.006,0.458,0.458,23.028,23.028,-1.022e-4,0,1.022e-4,4.712,0.005,0.119,45,0,1.353,0,0,0,1.571,0,0.064,0.016,0.001,1.001e-5,9.806,NaN,0.248,NaN,2.115,3.348,2.637e-5,0.861,0.669,0.073,0.12,0.02,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.07,1.571,288.15,1.013e5,1.225,340.389,0.006,6.083e4,0.025,4.909e-4,0.005,0.038,0</datapoint>
+          <datapoint>0.089,0.008,0.008,0.57,0.57,26.683,26.684,-1.256e-4,0,1.256e-4,4.712,0.005,0.121,45,0,1.301,0,0,0,1.571,0,0.064,0.016,0.001,1.001e-5,9.806,NaN,0.248,NaN,2.35,3.721,4.91e-5,0.86,0.667,0.073,0.12,0.036,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.062,1.571,288.15,1.013e5,1.225,340.389,0.006,6.138e4,0.025,4.909e-4,0.007,0.039,0</datapoint>
+          <datapoint>0.095,0.013,0.013,0.768,0.768,32.171,32.171,-1.654e-4,0,1.654e-4,4.712,0.006,0.125,45,0,1.211,0,0,0,1.571,0,0.064,0.016,0.001,1e-5,9.806,NaN,0.248,NaN,2.702,4.281,1.129e-4,0.855,0.663,0.072,0.12,0.079,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.051,1.571,288.15,1.013e5,1.225,340.389,0.006,6.282e4,0.025,4.909e-4,0.01,0.041,0</datapoint>
+          <datapoint>0.105,0.022,0.022,1.131,1.131,40.308,40.308,-2.348e-4,0,2.348e-4,4.712,0.008,0,45,0,1.066,0,0,0,1.571,0,0.064,0.016,0.001,1e-5,9.806,NaN,0.248,NaN,3.223,5.111,3.15e-4,0.843,0.651,0.072,0.12,0.192,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.052,1.571,288.15,1.013e5,1.225,340.389,0.007,6.718e4,0.025,4.909e-4,0.01,0.042,0</datapoint>
+          <datapoint>0.115,0.036,0.036,1.575,1.575,48.454,48.454,-3.109e-4,0,3.109e-4,4.712,0.008,0,45,0,0.918,0,0,0,1.571,0,0.064,0.016,0.001,1e-5,9.806,NaN,0.248,NaN,3.745,5.942,7.164e-4,0.824,0.633,0.071,0.12,0.354,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.068,1.571,288.15,1.013e5,1.225,340.389,0.008,7.458e4,0.025,4.909e-4,0.012,0.043,0</datapoint>
+          <datapoint>0.127,0.058,0.058,2.2,2.2,58.034,58.034,-4.004e-4,0,4.004e-4,4.712,0.008,0,45,-5.099e-9,0.757,0,0,0,1.571,0,0.064,0.016,0.001,9.999e-6,9.806,NaN,0.247,NaN,4.358,6.921,0.002,0.797,0.607,0.07,0.12,0.562,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.088,1.571,288.15,1.013e5,1.225,340.389,0.009,8.707e4,0.025,4.909e-4,0.01,0.045,0</datapoint>
+          <datapoint>0.137,0.083,0.083,2.829,2.829,67.84,67.84,-4.765e-4,0,4.765e-4,4.712,0.008,0,45,-6.068e-9,0.638,0,0,0,1.571,0,0.064,0.016,0.001,9.996e-6,9.806,NaN,0.247,NaN,4.983,7.922,0.003,0.773,0.584,0.069,0.12,0.712,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.104,1.571,288.149,1.013e5,1.225,340.389,0.01,1.013e5,0.025,4.909e-4,0.01,0.046,0</datapoint>
+          <datapoint>0.147,0.115,0.115,3.557,3.557,77.663,77.663,-5.526e-4,0,5.526e-4,4.712,0.008,0,45,-7.037e-9,0.536,0,0,0,1.571,0,0.064,0.016,0.001,9.992e-6,9.806,NaN,0.247,NaN,5.607,8.926,0.004,0.749,0.561,0.068,0.12,0.815,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.12,1.571,288.149,1.013e5,1.225,340.388,0.012,1.19e5,0.025,4.909e-4,0.01,0.047,0</datapoint>
+          <datapoint>0.157,0.154,0.154,4.383,4.383,87.503,87.503,-6.287e-4,0,6.287e-4,4.712,0.008,0,45,-8.007e-9,0.448,0,0,0,1.571,0,0.064,0.016,0.001,9.989e-6,9.806,NaN,0.247,NaN,6.232,9.933,0.006,0.726,0.538,0.067,0.12,0.875,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.115,1.571,288.149,1.013e5,1.225,340.388,0.014,1.399e5,0.025,4.909e-4,0.009,0.048,0</datapoint>
+          <datapoint>0.166,0.197,0.197,5.21,5.21,96.372,96.372,-6.972e-4,0,6.972e-4,4.712,0.008,0,45,-8.879e-9,0.382,0,0,0,1.571,0,0.064,0.016,0.001,9.986e-6,9.806,NaN,0.247,NaN,6.794,10.841,0.008,0.706,0.52,0.067,0.12,0.896,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.102,1.571,288.149,1.013e5,1.225,340.388,0.016,1.615e5,0.025,4.909e-4,0.01,0.049,0</datapoint>
+          <datapoint>0.176,0.255,0.255,6.229,6.229,107.322,107.322,-7.734e-4,0,7.734e-4,4.712,0.008,0,45,-9.849e-9,0.322,0,0,0,1.571,0,0.064,0.016,0.001,9.982e-6,9.806,NaN,0.247,NaN,7.484,11.963,0.012,0.687,0.501,0.066,0.12,0.891,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.088,1.571,288.148,1.013e5,1.225,340.388,0.019,1.888e5,0.025,4.909e-4,0.01,0.05,0</datapoint>
+          <datapoint>0.186,0.322,0.322,7.357,7.357,118.3,118.3,-8.495e-4,0,8.495e-4,4.712,0.008,0,45,-1.082e-8,0.274,0,0,0,1.571,0,0.064,0.016,0.001,9.977e-6,9.806,NaN,0.246,NaN,8.174,13.088,0.015,0.669,0.483,0.065,0.12,0.866,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.073,1.571,288.148,1.013e5,1.225,340.388,0.022,2.197e5,0.025,4.909e-4,0.006,0.051,0</datapoint>
+          <datapoint>0.192,0.369,0.369,8.086,8.086,124.901,124.901,-8.952e-4,0,8.952e-4,4.712,0.008,0,45,-1.14e-8,0.249,0,0,0,1.571,0,0.064,0.015,0.001,9.975e-6,9.806,NaN,0.246,NaN,8.588,13.765,0.018,0.658,0.473,0.065,0.12,0.842,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.065,1.571,288.148,1.013e5,1.225,340.387,0.025,2.399e5,0.025,4.909e-4,0.009,0.052,0</datapoint>
+          <datapoint>0.201,0.447,0.447,9.243,9.243,132.227,132.227,-9.637e-4,0,9.637e-4,4.712,0.008,0,45,-1.227e-8,0.218,0,0,0,1.571,0,0.064,0.015,0.001,9.97e-6,9.806,NaN,0.246,NaN,9.042,14.519,0.022,0.645,0.46,0.065,0.12,0.804,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.055,1.571,288.147,1.013e5,1.225,340.387,0.028,2.723e5,0.025,4.909e-4,0.005,0.054,0</datapoint>
+          <datapoint>0.206,0.495,0.495,9.915,9.915,136.303,136.303,-0.001,0,0.001,4.712,0.008,0,45,-1.276e-8,0.205,0,0,0,1.571,0,0.063,0.015,0.001,9.967e-6,9.806,NaN,0.246,NaN,9.294,14.939,0.024,0.637,0.453,0.065,0.12,0.785,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.066,1.571,288.147,1.013e5,1.225,340.387,0.03,2.912e5,0.025,4.909e-4,0.008,0.055,0</datapoint>
+          <datapoint>0.214,0.573,0.573,10.947,10.947,139.054,139.054,-0.001,0,0.001,4.712,0.008,0,45,-1.348e-8,0.187,0,0,0,1.571,0,0.063,0.015,0.001,9.963e-6,9.806,NaN,0.246,NaN,9.458,15.226,0.028,0.628,0.443,0.064,0.12,0.758,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.081,1.571,288.146,1.013e5,1.225,340.387,0.033,3.204e5,0.025,4.909e-4,0.009,0.056,0</datapoint>
+          <datapoint>0.223,0.679,0.679,12.233,12.233,142.408,142.408,-0.001,0,0.001,4.712,0.008,0,45,-1.437e-8,0.169,0,0,0,1.571,0,0.063,0.015,0.001,9.958e-6,9.806,NaN,0.245,NaN,9.657,15.577,0.034,0.618,0.433,0.064,0.12,0.73,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.1,1.571,288.146,1.013e5,1.225,340.386,0.036,3.569e5,0.025,4.909e-4,0.003,0.057,0</datapoint>
+          <datapoint>0.226,0.721,0.721,12.714,12.714,143.641,143.641,-0.001,0,0.001,4.712,0.008,0,45,-1.47e-8,0.164,0,0,0,1.571,0,0.063,0.015,1e-3,9.956e-6,9.806,NaN,0.245,NaN,9.73,15.706,0.036,0.617,0.433,0.064,0.12,0.724,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.107,1.571,288.145,1.013e5,1.225,340.386,0.038,3.706e5,0.025,4.909e-4,0.005,0.059,0</datapoint>
+          <datapoint>0.231,0.787,0.787,13.422,13.422,136.667,136.667,-0.001,0,0.001,4.712,0.008,0,45,-1.519e-8,0.156,0,0,0,1.571,0,0.063,0.015,9.989e-4,9.954e-6,9.806,NaN,0.245,NaN,9.283,15.001,0.04,0.617,0.433,0.064,0.12,0.717,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.118,1.571,288.145,1.013e5,1.225,340.386,0.04,3.907e5,0.025,4.909e-4,0.005,0.06,0</datapoint>
+          <datapoint>0.236,0.855,0.855,14.081,14.081,129.811,129.811,-0.001,0,0.001,4.712,0.008,0,45,-1.567e-8,0.149,0,0,0,1.571,0,0.063,0.015,9.978e-4,9.951e-6,9.806,NaN,0.245,NaN,8.845,14.308,0.043,0.617,0.433,0.064,0.12,0.711,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.128,1.571,288.144,1.013e5,1.225,340.386,0.042,4.095e5,0.025,4.909e-4,0.007,0.061,0</datapoint>
+          <datapoint>0.243,0.958,0.958,14.943,14.943,112.83,112.83,-0.001,0,0.001,4.712,0.008,0,45,-1.635e-8,0.142,0,0,0,1.571,0,0.063,0.015,9.964e-4,9.948e-6,9.806,NaN,0.245,NaN,7.769,12.584,0.048,0.617,0.433,0.064,0.12,0.704,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.143,1.571,288.144,1.013e5,1.225,340.385,0.044,4.341e5,0.025,4.909e-4,0.004,0.062,0</datapoint>
+          <datapoint>0.247,1.017,1.017,15.365,15.365,103.492,103.519,-0.001,0,0.001,4.712,0.008,2.344,45,-1.673e-8,0.139,0,0,0,1.571,0,0.063,0.015,9.956e-4,9.946e-6,9.806,0.3,0.245,2.189,7.179,11.636,0.051,0.617,0.433,0.064,0.12,0.701,2.038,4.46,-3.636e-4,0,0,0,0,0,2.151,1.571,288.143,1.013e5,1.225,340.385,0.046,4.461e5,0.025,4.909e-4,0.006,0.063,0</datapoint>
+          <datapoint>0.253,1.108,1.108,15.929,15.929,89.472,89.504,-0.001,0,0.001,4.712,0.021,2.395,45,-1.781e-8,0.134,0,0.048,1.245e-6,1.571,1.571,0.063,0.015,9.948e-4,9.944e-6,9.806,0.3,0.245,2.216,6.295,10.212,0.054,0.617,0.433,0.064,0.12,0.696,1.95,4.321,3.945e-4,0,0,0,0,7.105e-4,2.164,1.571,288.143,1.013e5,1.225,340.385,0.047,4.622e5,0.025,4.909e-4,0.008,0.064,0</datapoint>
+          <datapoint>0.261,1.241,1.241,16.579,16.579,69.901,69.942,-0.002,0,0.002,4.712,0.041,2.408,45,-2.106e-8,0.128,0,0.119,-2.097e-6,1.57,1.571,0.063,0.015,9.936e-4,9.941e-6,9.806,0.301,0.245,2.249,5.063,8.222,0.058,0.617,0.433,0.063,0.12,0.69,1.849,4.154,-3.533e-4,0,0,0,0,0.004,2.183,1.571,288.142,1.013e5,1.225,340.384,0.049,4.807e5,0.025,4.909e-4,0.008,0.065,0</datapoint>
+          <datapoint>0.269,1.375,1.375,17.092,17.092,59.256,59.304,-0.002,0,0.002,4.712,0.06,2.365,45,-2.619e-8,0.123,0,0.189,-5.338e-6,1.569,1.571,0.063,0.015,9.927e-4,9.939e-6,9.806,0.301,0.244,2.278,4.394,7.142,0.061,0.617,0.433,0.063,0.12,0.686,1.763,4.005,8.306e-5,0,0,0,0,0.009,2.201,1.571,288.141,1.013e5,1.225,340.383,0.051,4.953e5,0.025,4.909e-4,0.008,0.066,0</datapoint>
+          <datapoint>0.277,1.514,1.514,17.526,17.526,48.472,48.526,-0.003,0,0.003,4.712,0.079,2.287,45,-3.331e-8,0.118,0,0.262,-4.972e-6,1.567,1.571,0.063,0.015,9.919e-4,9.937e-6,9.806,0.302,0.244,2.305,3.717,6.046,0.064,0.617,0.433,0.063,0.12,0.681,1.681,3.857,-2.868e-4,0,0,0,0,0.017,2.22,1.571,288.14,1.013e5,1.225,340.383,0.052,5.077e5,0.025,4.909e-4,0.008,0.067,0</datapoint>
+          <datapoint>0.285,1.65,1.65,17.889,17.889,46.317,46.367,-0.003,0,0.003,4.712,0.096,2.152,45,-4.185e-8,0.113,0,0.332,-5.96e-6,1.565,1.571,0.063,0.014,9.913e-4,9.936e-6,9.806,0.303,0.244,2.331,3.582,5.829,0.066,0.617,0.433,0.063,0.12,0.677,1.603,3.71,9.177e-5,0,0,0,0,0.027,2.237,1.571,288.139,1.013e5,1.225,340.382,0.053,5.181e5,0.025,4.909e-4,0.008,0.068,0</datapoint>
+          <datapoint>0.292,1.788,1.788,18.235,18.235,44.167,44.212,-0.004,0,0.004,4.712,0.112,1.981,45,-5.197e-8,0.108,0,0.402,-1.028e-5,1.562,1.571,0.063,0.014,9.906e-4,9.934e-6,9.806,0.303,0.244,2.359,3.447,5.613,0.068,0.617,0.433,0.063,0.12,0.673,1.522,3.553,-2.392e-4,0,0,0,0,0.038,2.255,1.571,288.138,1.013e5,1.225,340.382,0.054,5.279e5,0.025,4.909e-4,0.008,0.069,0</datapoint>
+          <datapoint>0.3,1.93,1.93,18.566,18.566,42.006,42.044,-0.005,0,0.005,4.712,0.126,1.774,45,-6.362e-8,0.103,0,0.471,-7.504e-6,1.558,1.571,0.063,0.014,9.9e-4,9.932e-6,9.806,0.304,0.244,2.388,3.311,5.395,0.07,0.617,0.433,0.063,0.12,0.668,1.437,3.382,-3.218e-4,0,0,0,0,0.05,2.273,1.571,288.137,1.013e5,1.225,340.381,0.055,5.374e5,0.025,4.909e-4,0.006,0.07,0</datapoint>
+          <datapoint>0.306,2.042,2.042,18.813,18.814,40.318,40.348,-0.006,0,0.006,4.712,0.136,1.548,45,-7.366e-8,0.097,0,0.524,-6.963e-6,1.556,1.571,0.063,0.014,9.895e-4,9.931e-6,9.806,0.305,0.244,2.421,3.205,5.225,0.071,0.617,0.433,0.063,0.12,0.663,1.344,3.193,-3.487e-4,0,0,0,0,0.06,2.256,1.571,288.137,1.013e5,1.225,340.381,0.056,5.444e5,0.025,4.909e-4,0.008,0.071,0</datapoint>
+          <datapoint>0.314,2.194,2.194,19.133,19.134,39.407,39.425,-0.007,7.848e-9,0.007,4.712,0.147,1.196,45,-8.817e-8,0.089,0,0.592,-2.928e-6,1.551,1.571,0.063,0.014,9.889e-4,9.93e-6,9.806,0.306,0.244,2.466,3.148,5.134,0.073,0.617,0.433,0.063,0.12,0.657,1.218,2.928,4.681e-5,0,0,0,0,0.074,2.235,1.571,288.136,1.013e5,1.225,340.38,0.057,5.534e5,0.025,4.909e-4,0.008,0.072,0</datapoint>
+          <datapoint>0.323,2.358,2.358,19.463,19.464,38.443,38.451,-0.008,1.277e-8,0.008,4.712,0.156,0.788,45,-1.045e-7,0.08,0,0.66,-3.331e-7,1.546,1.571,0.062,0.014,9.882e-4,9.928e-6,9.806,0.307,0.244,2.516,3.087,5.039,0.075,0.617,0.433,0.063,0.12,0.65,1.084,2.638,2.945e-4,0,0,0,0,0.089,2.212,1.571,288.135,1.013e5,1.225,340.38,0.057,5.627e5,0.025,4.909e-4,0.009,0.073,0</datapoint>
+          <datapoint>0.332,2.536,2.536,19.808,19.808,37.404,37.406,-0.01,1.956e-8,0.01,4.712,0.161,0.313,45,-1.229e-7,0.071,0,0.727,-1.916e-6,1.539,1.571,0.062,0.014,9.876e-4,9.927e-6,9.806,0.308,0.244,2.572,3.022,4.936,0.077,0.617,0.433,0.063,0.12,0.643,0.94,2.314,-4.443e-5,0,0,0,0,0.104,2.187,1.571,288.134,1.013e5,1.225,340.379,0.058,5.725e5,0.025,4.909e-4,0.01,0.074,0</datapoint>
+          <datapoint>0.342,2.736,2.736,20.176,20.176,36.255,36.256,-0.011,2.883e-8,0.011,4.712,0.161,0.245,45,-1.434e-7,0.06,0,0.792,-5.526e-6,1.532,1.571,0.062,0.014,9.868e-4,9.925e-6,9.806,0.31,0.244,2.638,2.951,4.823,0.079,0.617,0.433,0.063,0.12,0.636,0.783,1.947,3.745e-4,0,0,0,0,0.12,2.16,1.571,288.132,1.013e5,1.225,340.378,0.06,5.829e5,0.025,4.909e-4,0.009,0.075,0</datapoint>
+          <datapoint>0.351,2.928,2.928,20.512,20.513,35.165,35.174,-0.013,3.932e-8,0.013,4.712,0.156,0.788,45,-1.625e-7,0.05,0,0.845,-1.101e-5,1.524,1.571,0.062,0.014,9.861e-4,9.923e-6,9.806,0.311,0.244,2.701,2.884,4.716,0.081,0.617,0.433,0.063,0.12,0.631,0.641,1.599,1.849e-4,0,0,0,0,0.132,2.14,1.571,288.131,1.013e5,1.225,340.377,0.061,5.925e5,0.025,4.909e-4,0.013,0.076,0</datapoint>
+          <datapoint>0.364,3.207,3.207,20.976,20.976,33.585,33.619,-0.015,5.785e-8,0.015,4.712,0.141,1.517,45,-1.881e-7,0.038,0,0.907,-1.698e-5,1.512,1.571,0.062,0.014,9.852e-4,9.921e-6,9.806,0.313,0.244,2.779,2.788,4.563,0.083,0.617,0.433,0.063,0.12,0.625,0.478,1.183,1.874e-4,0,0,0,0,0.145,2.168,1.571,288.129,1.013e5,1.225,340.376,0.062,6.059e5,0.025,4.909e-4,0.017,0.077,0</datapoint>
+          <datapoint>0.382,3.578,3.578,21.543,21.543,31.518,31.616,-0.017,9.003e-8,0.017,4.712,0.106,2.479,45,-2.157e-7,0.022,0,0.962,-1.111e-5,1.496,1.571,0.062,0.014,9.841e-4,9.919e-6,9.806,0.316,0.243,2.885,2.664,4.364,0.087,0.617,0.433,0.063,0.121,0.62,0.274,0.635,3.705e-4,0,0,0,0,0.155,2.204,1.571,288.127,1.013e5,1.225,340.375,0.064,6.223e5,0.025,4.909e-4,0.023,0.078,0</datapoint>
+          <datapoint>0.405,4.083,4.083,22.238,22.238,28.734,28.973,-0.019,1.472e-7,0.019,4.712,0.034,3.715,45,-2.37e-7,0.002,0,0.985,-2.201e-4,1.473,1.571,0.062,0.014,9.826e-4,9.915e-6,9.806,0.319,0.243,3.032,2.499,4.1,0.093,0.617,0.433,0.063,0.121,0.617,0.022,-0.086,9.333e-5,0,0,0,0,0.152,2.25,1.571,288.123,1.013e5,1.225,340.373,0.066,6.425e5,0.025,4.909e-4,0.035,0.079,0</datapoint>
+          <datapoint>0.44,4.87,4.87,23.208,23.209,27.261,27.854,-0.017,2.674e-7,0.017,4.712,0.13,5.716,45,-2.185e-7,0.026,-1.155e-8,-0.904,-3.566e-6,1.44,1.571,0.062,0.014,9.805e-4,9.91e-6,9.806,0.315,0.243,2.879,2.428,3.991,0.102,0.617,0.433,0.063,0.121,0.621,0.319,1.035,-3.006e-4,0,0,0,0,-0.118,2.314,1.571,288.118,1.013e5,1.224,340.37,0.069,6.709e5,0.025,4.909e-4,0.016,0.08,0</datapoint>
+          <datapoint>0.456,5.249,5.249,23.643,23.644,26.544,27.346,-0.014,3.425e-7,0.014,4.712,0.229,6.573,45,-1.818e-7,0.037,-1.261e-8,-0.82,-5.693e-8,1.426,1.571,0.062,0.014,9.795e-4,9.908e-6,9.806,0.313,0.243,2.814,2.394,3.939,0.106,0.617,0.433,0.063,0.121,0.625,0.462,1.394,8.186e-5,0,0,0,0,-0.093,2.333,1.571,288.116,1.013e5,1.224,340.368,0.07,6.837e5,0.025,4.909e-4,0.011,0.081,0</datapoint>
+          <datapoint>0.467,5.516,5.516,23.938,23.94,26.042,26.998,-0.011,4.059e-7,0.011,4.712,0.306,7.123,45,-1.437e-7,0.044,-1.303e-8,-0.746,8.933e-6,1.417,1.571,0.062,0.014,9.789e-4,9.906e-6,9.806,0.312,0.243,2.774,2.371,3.904,0.109,0.617,0.433,0.063,0.121,0.628,0.556,1.617,-3.098e-5,0,0,0,0,-0.075,2.334,1.571,288.114,1.013e5,1.224,340.367,0.071,6.923e5,0.025,4.909e-4,0.01,0.082,0</datapoint>
+          <datapoint>0.477,5.749,5.749,24.189,24.192,25.776,26.866,-0.008,4.709e-7,0.008,4.712,0.377,7.573,45,-1.016e-7,0.049,-1.414e-8,-0.672,5.707e-6,1.411,1.571,0.062,0.014,9.783e-4,9.905e-6,9.806,0.311,0.243,2.746,2.361,3.89,0.112,0.617,0.433,0.063,0.121,0.63,0.626,1.778,-5.002e-5,0,0,0,0,-0.06,2.335,1.571,288.113,1.013e5,1.224,340.366,0.072,6.997e5,0.025,4.909e-4,0.009,0.083,0</datapoint>
+          <datapoint>0.485,5.959,5.959,24.411,24.415,25.545,26.747,-0.004,5.381e-7,0.004,4.713,0.444,7.928,45,-5.652e-8,0.052,-1.535e-8,-0.599,5.139e-6,1.405,1.571,0.062,0.014,9.778e-4,9.904e-6,9.806,0.311,0.243,2.726,2.353,3.878,0.115,0.617,0.433,0.063,0.121,0.632,0.678,1.895,-4.902e-4,0,0,0,0,-0.047,2.335,1.571,288.111,1.013e5,1.224,340.365,0.072,7.062e5,0.025,4.909e-4,0.008,0.084,0</datapoint>
+          <datapoint>0.493,6.154,6.154,24.613,24.618,25.338,26.635,-6.587e-4,6.089e-7,6.587e-4,4.713,0.508,8.211,45,-8.389e-9,0.055,-1.594e-8,-0.527,9.283e-6,1.401,1.571,0.062,0.014,9.773e-4,9.903e-6,9.806,0.31,0.243,2.711,2.345,3.867,0.117,0.617,0.433,0.063,0.121,0.634,0.718,1.981,-4.06e-4,0,0,0,0,-0.035,2.336,1.571,288.11,1.013e5,1.224,340.365,0.073,7.122e5,0.025,4.909e-4,0.007,0.084,0</datapoint>
+          <datapoint>0.501,6.338,6.338,24.801,24.808,25.15,26.529,0.003,6.843e-7,0.003,1.571,0.57,8.439,45,4.288e-8,0.057,-1.552e-8,-0.455,6.685e-6,1.397,1.571,0.062,0.014,9.769e-4,9.902e-6,9.806,0.31,0.243,2.701,2.338,3.856,0.119,0.617,0.433,0.063,0.121,0.635,0.748,2.045,4.71e-4,0,0,0,0,-0.026,2.335,1.571,288.109,1.013e5,1.224,340.364,0.073,7.178e5,0.025,4.909e-4,0.007,0.085,0</datapoint>
+          <datapoint>0.508,6.515,6.515,24.98,24.988,24.974,26.426,0.008,7.648e-7,0.008,1.571,0.631,8.639,45,9.735e-8,0.059,-1.523e-8,-0.384,4.254e-6,1.394,1.571,0.062,0.014,9.765e-4,9.901e-6,9.806,0.31,0.242,2.691,2.331,3.846,0.121,0.617,0.433,0.063,0.121,0.636,0.776,2.105,-8.58e-5,0,0,0,0,-0.018,2.321,1.571,288.108,1.012e5,1.224,340.363,0.074,7.23e5,0.025,4.909e-4,0.007,0.086,0</datapoint>
+          <datapoint>0.515,6.686,6.686,25.149,25.159,24.814,26.325,0.012,8.503e-7,0.012,1.571,0.691,8.792,45,1.547e-7,0.061,-1.517e-8,-0.313,3.833e-6,1.392,1.571,0.062,0.014,9.761e-4,9.9e-6,9.806,0.31,0.242,2.685,2.324,3.836,0.123,0.617,0.433,0.063,0.121,0.637,0.795,2.147,-3.021e-5,0,0,0,0,-0.012,2.307,1.571,288.107,1.012e5,1.224,340.363,0.074,7.28e5,0.025,4.909e-4,0.007,0.087,0</datapoint>
+          <datapoint>0.521,6.852,6.852,25.312,25.323,24.667,26.224,0.017,9.41e-7,0.017,1.571,0.749,8.904,45,2.15e-7,0.061,-1.532e-8,-0.242,-9.482e-7,1.39,1.571,0.062,0.014,9.757e-4,9.899e-6,9.806,0.309,0.242,2.682,2.318,3.827,0.125,0.617,0.433,0.063,0.121,0.638,0.807,2.171,-1.665e-4,0,0,0,0,-0.007,2.294,1.571,288.105,1.012e5,1.224,340.362,0.075,7.328e5,0.025,4.909e-4,0.006,0.088,0</datapoint>
+          <datapoint>0.528,7.015,7.015,25.47,25.483,24.531,26.122,0.022,1.038e-6,0.022,1.571,0.806,8.976,45,2.787e-7,0.062,-1.646e-8,-0.171,1.4e-6,1.388,1.571,0.062,0.014,9.753e-4,9.898e-6,9.806,0.309,0.242,2.682,2.311,3.818,0.126,0.617,0.433,0.063,0.121,0.638,0.811,2.18,-3.966e-4,0,0,0,0,-0.004,2.282,1.571,288.104,1.012e5,1.224,340.361,0.075,7.375e5,0.025,4.909e-4,0.004,0.09,0</datapoint>
+          <datapoint>0.532,7.125,7.125,25.576,25.59,24.445,26.051,0.025,1.107e-6,0.025,1.571,0.845,9.004,45,3.24e-7,0.062,-1.655e-8,-0.124,-1.27e-6,1.388,1.571,0.062,0.014,9.751e-4,9.898e-6,9.806,0.309,0.242,2.684,2.307,3.812,0.127,0.617,0.433,0.063,0.121,0.638,0.811,2.178,-7.131e-5,0,0,0,0,-0.002,2.273,1.571,288.104,1.012e5,1.224,340.361,0.076,7.406e5,0.025,4.909e-4,0.006,0.091,0</datapoint>
+          <datapoint>0.538,7.286,7.286,25.729,25.745,24.538,26.155,0.031,1.214e-6,0.031,1.571,0.902,9.055,45,3.937e-7,0.061,-1.646e-8,-0.054,1.905e-8,1.387,1.571,0.062,0.014,9.747e-4,9.897e-6,9.806,0.309,0.242,2.688,2.314,3.825,0.129,0.617,0.433,0.063,0.121,0.637,0.805,2.163,-1.749e-4,0,0,0,0,-3.352e-4,2.261,1.571,288.103,1.012e5,1.224,340.36,0.076,7.451e5,0.025,4.909e-4,0.006,0.092,0</datapoint>
+          <datapoint>0.545,7.447,7.447,25.883,25.9,24.638,26.254,0.037,1.328e-6,0.037,1.571,0.958,9.07,45,4.675e-7,0.06,-1.684e-8,0.016,2.353e-8,1.387,1.571,0.062,0.014,9.743e-4,9.896e-6,9.806,0.31,0.242,2.695,2.321,3.838,0.13,0.617,0.433,0.063,0.121,0.637,0.792,2.136,1.75e-4,0,0,0,0,3.041e-5,2.249,1.571,288.102,1.012e5,1.224,340.36,0.077,7.496e5,0.025,4.909e-4,0.006,0.092,0</datapoint>
+          <datapoint>0.551,7.609,7.609,26.037,26.056,24.747,26.349,0.043,1.449e-6,0.043,1.571,1.015,9.047,45,5.458e-7,0.059,-1.624e-8,0.086,-3.72e-7,1.387,1.571,0.062,0.013,9.74e-4,9.895e-6,9.806,0.31,0.242,2.704,2.328,3.85,0.132,0.617,0.433,0.063,0.121,0.636,0.774,2.091,-3.172e-4,0,0,0,0,8.389e-4,2.238,1.571,288.101,1.012e5,1.224,340.359,0.077,7.542e5,0.025,4.909e-4,0.006,0.094,0</datapoint>
+          <datapoint>0.557,7.773,7.773,26.193,26.215,24.87,26.438,0.049,1.58e-6,0.049,1.571,1.071,8.97,45,6.294e-7,0.057,-1.669e-8,0.155,1.102e-5,1.388,1.571,0.062,0.013,9.736e-4,9.894e-6,9.806,0.31,0.242,2.719,2.335,3.863,0.133,0.617,0.433,0.063,0.121,0.635,0.743,2.017,3.046e-4,0,0,0,0,0.003,2.238,1.571,288.099,1.012e5,1.224,340.358,0.078,7.588e5,0.025,4.909e-4,0.006,0.095,0</datapoint>
+          <datapoint>0.563,7.942,7.942,26.353,26.377,25.003,26.525,0.057,1.721e-6,0.057,1.571,1.129,8.855,45,7.195e-7,0.054,-1.695e-8,0.224,6.929e-6,1.389,1.571,0.062,0.013,9.732e-4,9.893e-6,9.806,0.31,0.242,2.736,2.342,3.877,0.134,0.617,0.433,0.063,0.121,0.633,0.706,1.927,4.216e-4,0,0,0,0,0.006,2.237,1.571,288.098,1.012e5,1.224,340.358,0.078,7.636e5,0.025,4.909e-4,0.007,0.096,0</datapoint>
+          <datapoint>0.57,8.118,8.118,26.52,26.547,25.149,26.611,0.064,1.875e-6,0.064,1.571,1.187,8.699,45,8.176e-7,0.051,-1.71e-8,0.292,6.56e-7,1.391,1.571,0.062,0.013,9.729e-4,9.892e-6,9.806,0.311,0.242,2.756,2.35,3.89,0.136,0.617,0.433,0.063,0.121,0.632,0.663,1.818,2.776e-4,0,0,0,0,0.009,2.237,1.571,288.097,1.012e5,1.224,340.357,0.079,7.685e5,0.025,4.909e-4,0.007,0.097,0</datapoint>
+          <datapoint>0.577,8.303,8.303,26.695,26.725,25.31,26.698,0.073,2.046e-6,0.073,1.571,1.247,8.497,45,9.254e-7,0.048,-1.643e-8,0.36,-5.643e-6,1.393,1.571,0.062,0.013,9.724e-4,9.891e-6,9.806,0.312,0.242,2.78,2.358,3.905,0.137,0.617,0.433,0.063,0.121,0.63,0.613,1.689,4.489e-4,0,0,0,0,0.014,2.237,1.571,288.096,1.012e5,1.224,340.356,0.079,7.737e5,0.025,4.909e-4,0.007,0.098,0</datapoint>
+          <datapoint>0.584,8.501,8.501,26.883,26.915,25.488,26.787,0.082,2.236e-6,0.082,1.571,1.309,8.241,45,1.046e-6,0.043,-1.65e-8,0.427,-1.255e-5,1.396,1.571,0.062,0.013,9.72e-4,9.891e-6,9.806,0.312,0.242,2.808,2.366,3.92,0.139,0.617,0.433,0.063,0.121,0.628,0.554,1.536,3.67e-4,0,0,0,0,0.019,2.236,1.571,288.095,1.012e5,1.224,340.355,0.08,7.793e5,0.025,4.909e-4,0.005,0.099,0</datapoint>
+          <datapoint>0.589,8.623,8.623,26.999,27.033,25.601,26.84,0.088,2.357e-6,0.088,1.571,1.346,8.063,45,1.122e-6,0.041,-1.659e-8,0.466,-8.9e-6,1.398,1.571,0.062,0.013,9.717e-4,9.89e-6,9.806,0.313,0.242,2.827,2.371,3.93,0.14,0.617,0.433,0.063,0.121,0.627,0.516,1.435,1.634e-4,0,0,0,0,0.023,2.236,1.571,288.094,1.012e5,1.224,340.355,0.08,7.827e5,0.025,4.909e-4,0.007,0.1,0</datapoint>
+          <datapoint>0.596,8.808,8.808,27.174,27.21,25.651,26.796,0.098,2.545e-6,0.098,1.571,1.4,7.751,45,1.242e-6,0.036,-1.738e-8,0.519,-5.482e-6,1.402,1.571,0.062,0.013,9.713e-4,9.889e-6,9.806,0.313,0.242,2.857,2.371,3.931,0.141,0.617,0.433,0.063,0.121,0.625,0.456,1.274,3.562e-4,0,0,0,0,0.028,2.236,1.571,288.093,1.012e5,1.224,340.354,0.081,7.879e5,0.025,4.909e-4,0.009,0.1,0</datapoint>
+          <datapoint>0.605,9.066,9.066,27.416,27.455,25.72,26.736,0.111,2.815e-6,0.111,1.571,1.471,7.299,45,1.414e-6,0.03,-1.815e-8,0.583,-1.255e-5,1.407,1.571,0.061,0.013,9.708e-4,9.888e-6,9.806,0.314,0.242,2.898,2.371,3.933,0.143,0.617,0.433,0.063,0.121,0.622,0.376,1.054,1.472e-4,0,0,0,0,0.035,2.221,1.571,288.091,1.012e5,1.224,340.353,0.081,7.95e5,0.025,4.909e-4,0.011,0.101,0</datapoint>
+          <datapoint>0.616,9.374,9.374,27.704,27.748,25.802,26.665,0.128,3.148e-6,0.128,1.571,1.549,6.731,45,1.629e-6,0.023,-1.797e-8,0.645,-1.285e-5,1.414,1.571,0.061,0.013,9.701e-4,9.886e-6,9.806,0.315,0.242,2.948,2.371,3.936,0.146,0.617,0.433,0.063,0.121,0.62,0.283,0.792,3.505e-4,0,0,0,0,0.042,2.189,1.571,288.089,1.012e5,1.224,340.352,0.082,8.034e5,0.025,4.909e-4,0.016,0.103,0</datapoint>
+          <datapoint>0.632,9.808,9.808,28.107,28.155,25.913,26.568,0.153,3.628e-6,0.153,1.571,1.647,5.867,45,1.946e-6,0.012,-2.446e-8,0.702,-3.465e-5,1.424,1.571,0.061,0.013,9.692e-4,9.884e-6,9.806,0.317,0.242,3.024,2.371,3.939,0.149,0.617,0.433,0.063,0.121,0.618,0.15,0.405,2.208e-4,0,0,0,0,0.048,2.145,1.571,288.086,1.012e5,1.224,340.35,0.083,8.15e5,0.025,4.909e-4,0.02,0.105,0</datapoint>
+          <datapoint>0.652,10.375,10.375,28.606,28.659,23.967,24.371,0.187,4.255e-6,0.187,1.571,1.75,4.421,45,2.38e-6,0.001,-2.763e-8,-0.721,-3.489e-4,1.439,1.571,0.061,0.013,9.68e-4,9.881e-6,9.806,0.319,0.241,3.106,2.243,3.73,0.154,0.617,0.433,0.063,0.121,0.617,0.017,0.101,-2.986e-4,0,0,0,0,-0.049,2.092,1.571,288.083,1.012e5,1.224,340.348,0.085,8.294e5,0.025,4.909e-4,0.016,0.106,0</datapoint>
+          <datapoint>0.668,10.836,10.836,28.932,28.988,16.773,16.971,0.215,4.749e-6,0.215,1.571,1.806,2.581,45,2.742e-6,0.013,-3.02e-8,-0.689,-3.33e-5,1.45,1.571,0.061,0.013,9.672e-4,9.879e-6,9.806,0.317,0.241,3.032,1.794,2.986,0.158,0.617,0.433,0.063,0.121,0.618,0.153,0.508,-1.379e-4,0,0,0,0,-0.044,2.077,1.571,288.08,1.012e5,1.224,340.346,0.086,8.388e5,0.025,4.909e-4,0.016,0.107,0</datapoint>
+          <datapoint>0.684,11.3,11.3,29.117,29.175,6.428,6.457,0.244,5.226e-6,0.244,1.571,1.831,0.609,45,3.113e-6,0.023,-2.121e-8,-0.615,-2.067e-5,1.46,1.571,0.061,0.013,9.666e-4,9.878e-6,9.806,0.315,0.241,2.967,1.153,1.92,0.161,0.617,0.433,0.063,0.121,0.62,0.279,0.863,-4.554e-4,0,0,0,0,-0.034,2.062,1.571,288.077,1.012e5,1.224,340.344,0.086,8.441e5,0.025,4.909e-4,0.012,0.109,0</datapoint>
+          <datapoint>0.696,11.652,11.652,29.151,29.209,-0.815,1.02,0.267,5.569e-6,0.267,1.571,1.831,0.613,45,3.395e-6,0.029,-2.031e-8,-0.536,1.455e-6,1.467,1.571,0.061,0.013,9.664e-4,9.878e-6,9.806,0.314,0.241,2.926,0.705,1.175,0.162,0.617,0.433,0.063,0.121,0.622,0.362,1.087,4.88e-4,0,0,0,0,-0.026,2.051,1.571,288.074,1.012e5,1.224,340.343,0.086,8.45e5,0.025,4.909e-4,0.007,0.11,0</datapoint>
+          <datapoint>0.703,11.854,11.854,29.131,29.188,-4.98,5.137,0.279,5.757e-6,0.279,1.571,1.824,1.259,45,3.556e-6,0.033,-1.99e-8,-0.483,-1.248e-5,1.471,1.571,0.061,0.013,9.662e-4,9.877e-6,9.806,0.314,0.241,2.904,0.448,0.746,0.162,0.617,0.433,0.063,0.121,0.623,0.409,1.21,4.506e-4,0,0,0,0,-0.021,2.056,1.571,288.073,1.012e5,1.224,340.342,0.086,8.444e5,0.025,4.909e-4,0.009,0.113,0</datapoint>
+          <datapoint>0.712,12.104,12.104,29.078,29.135,-7.279,7.485,0.295,5.982e-6,0.295,1.571,1.811,1.743,45,3.756e-6,0.037,-1.906e-8,-0.409,-1.726e-5,1.475,1.571,0.061,0.013,9.662e-4,9.877e-6,9.806,0.313,0.241,2.876,0.305,0.509,0.162,0.617,0.433,0.063,0.121,0.625,0.468,1.361,9.996e-5,0,0,0,0,-0.015,2.079,1.571,288.071,1.012e5,1.224,340.341,0.086,8.429e5,0.025,4.909e-4,0.008,0.114,0</datapoint>
+          <datapoint>0.719,12.327,12.327,29.015,29.07,-9.331,9.569,0.309,6.174e-6,0.309,1.571,1.797,2.123,45,3.932e-6,0.04,-1.946e-8,-0.336,-1.107e-5,1.478,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.855,0.178,0.297,0.161,0.617,0.433,0.063,0.121,0.627,0.513,1.476,-3.105e-4,0,0,0,0,-0.01,2.1,1.571,288.07,1.012e5,1.224,340.34,0.086,8.411e5,0.025,4.909e-4,0.007,0.116,0</datapoint>
+          <datapoint>0.726,12.533,12.533,28.942,28.996,-11.233,11.493,0.321,6.345e-6,0.321,1.571,1.78,2.434,45,4.094e-6,0.043,-1.951e-8,-0.264,-5.063e-6,1.48,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.312,0.241,2.84,0.06,0.1,0.161,0.617,0.433,0.063,0.121,0.628,0.548,1.564,-2.082e-4,0,0,0,0,-0.006,2.119,1.571,288.069,1.012e5,1.224,340.34,0.086,8.39e5,0.025,4.909e-4,0.004,0.12,0</datapoint>
+          <datapoint>0.73,12.638,12.638,28.899,28.953,-12.205,12.474,0.328,6.43e-6,0.328,1.571,1.771,2.577,45,4.176e-6,0.044,-1.941e-8,-0.226,-1.878e-6,1.481,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.312,0.241,2.833,0,0,0.16,0.617,0.433,0.063,0.121,0.628,0.563,1.601,-3.92e-4,0,0,0,0,-0.005,2.129,1.571,288.068,1.012e5,1.224,340.339,0.086,8.378e5,0.025,4.909e-4,0.005,0.126,0</datapoint>
+          <datapoint>0.735,12.795,12.795,28.833,28.886,-12.193,12.476,0.338,6.554e-6,0.338,1.571,1.757,2.643,45,4.298e-6,0.045,-1.949e-8,-0.168,-2.174e-6,1.482,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.312,0.241,2.824,0,0,0.16,0.617,0.433,0.063,0.121,0.629,0.583,1.649,-3.778e-4,0,0,0,0,-0.003,2.144,1.571,288.067,1.012e5,1.224,340.338,0.085,8.359e5,0.025,4.909e-4,0.006,0.129,0</datapoint>
+          <datapoint>0.742,12.981,12.981,28.754,28.807,-12.178,12.473,0.349,6.695e-6,0.349,1.571,1.74,2.696,45,4.441e-6,0.047,-1.971e-8,-0.097,9.648e-6,1.483,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.312,0.241,2.817,0,0,0.159,0.617,0.433,0.063,0.121,0.629,0.6,1.69,-3.789e-4,0,0,0,0,-8.781e-4,2.162,1.571,288.066,1.012e5,1.224,340.338,0.085,8.337e5,0.025,4.909e-4,0.006,0.131,0</datapoint>
+          <datapoint>0.748,13.162,13.162,28.677,28.729,-12.165,12.466,0.36,6.828e-6,0.36,1.571,1.723,2.724,45,4.581e-6,0.047,-2.009e-8,-0.027,8.593e-6,1.483,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.312,0.241,2.812,0,0,0.158,0.617,0.433,0.063,0.121,0.63,0.61,1.715,3.489e-4,0,0,0,0,-6.771e-5,2.179,1.571,288.064,1.012e5,1.223,340.337,0.085,8.315e5,0.025,4.909e-4,0.006,0.132,0</datapoint>
+          <datapoint>0.754,13.341,13.341,28.601,28.652,-12.153,12.445,0.37,6.955e-6,0.37,1.571,1.706,2.681,45,4.717e-6,0.047,-2.074e-8,0.043,1.651e-5,1.483,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.312,0.241,2.815,0,0,0.158,0.617,0.433,0.063,0.121,0.63,0.603,1.698,3.154e-4,0,0,0,0,1.707e-4,2.172,1.571,288.063,1.012e5,1.223,340.336,0.085,8.292e5,0.025,4.909e-4,0.006,0.132,0</datapoint>
+          <datapoint>0.761,13.522,13.522,28.524,28.574,-12.142,12.417,0.381,7.078e-6,0.381,1.571,1.689,2.596,45,4.854e-6,0.046,-2.036e-8,0.111,1.042e-5,1.482,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.312,0.241,2.823,0,0,0.156,0.617,0.433,0.063,0.121,0.629,0.585,1.652,-4.721e-4,0,0,0,0,0.001,2.156,1.571,288.062,1.012e5,1.223,340.336,0.085,8.269e5,0.025,4.909e-4,0.007,0.133,0</datapoint>
+          <datapoint>0.767,13.71,13.71,28.444,28.493,-12.132,12.384,0.392,7.199e-6,0.392,1.571,1.672,2.486,45,4.995e-6,0.044,-2.012e-8,0.18,9.001e-6,1.482,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.312,0.241,2.834,0,0,0.155,0.617,0.433,0.063,0.121,0.628,0.562,1.588,1.67e-4,0,0,0,0,0.003,2.139,1.571,288.061,1.012e5,1.223,340.335,0.084,8.245e5,0.025,4.909e-4,0.007,0.135,0</datapoint>
+          <datapoint>0.774,13.905,13.905,28.361,28.409,-12.121,12.347,0.404,7.32e-6,0.404,1.571,1.656,2.35,45,5.141e-6,0.042,-1.954e-8,0.247,1.74e-6,1.48,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.312,0.241,2.848,0,0,0.154,0.617,0.433,0.063,0.121,0.627,0.531,1.505,4.743e-4,0,0,0,0,0.006,2.121,1.571,288.06,1.012e5,1.223,340.334,0.084,8.22e5,0.025,4.909e-4,0.007,0.136,0</datapoint>
+          <datapoint>0.782,14.111,14.111,28.273,28.32,-12.111,12.306,0.416,7.441e-6,0.416,1.571,1.639,2.185,45,5.294e-6,0.039,-1.849e-8,0.315,1.216e-6,1.478,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.866,0,0,0.153,0.617,0.433,0.063,0.121,0.626,0.492,1.399,3.724e-4,0,0,0,0,0.01,2.102,1.571,288.058,1.012e5,1.223,340.333,0.084,8.193e5,0.025,4.909e-4,0.008,0.137,0</datapoint>
+          <datapoint>0.789,14.334,14.334,28.177,28.224,-12.101,12.263,0.429,7.566e-6,0.429,1.571,1.623,1.985,45,5.457e-6,0.035,-1.678e-8,0.381,-3.358e-6,1.475,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.888,0,0,0.151,0.617,0.433,0.063,0.121,0.624,0.443,1.267,-4.126e-4,0,0,0,0,0.014,2.082,1.571,288.057,1.012e5,1.223,340.332,0.084,8.164e5,0.025,4.909e-4,0.009,0.138,0</datapoint>
+          <datapoint>0.798,14.581,14.581,28.071,28.117,-12.093,12.218,0.443,7.696e-6,0.443,1.571,1.606,1.743,45,5.638e-6,0.031,-1.748e-8,0.446,5.835e-6,1.472,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.917,0,0,0.15,0.617,0.433,0.063,0.121,0.623,0.384,1.099,2.918e-4,0,0,0,0,0.019,2.059,1.571,288.055,1.012e5,1.223,340.331,0.083,8.132e5,0.025,4.909e-4,0.01,0.139,0</datapoint>
+          <datapoint>0.808,14.867,14.867,27.948,27.993,-12.082,12.176,0.459,7.838e-6,0.459,1.571,1.59,1.51,45,5.846e-6,0.026,-1.783e-8,0.51,5.782e-6,1.467,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.315,0.241,2.946,0,0,0.148,0.617,0.433,0.063,0.121,0.621,0.325,0.931,-4.61e-4,0,0,0,0,0.026,2.07,1.571,288.053,1.012e5,1.223,340.33,0.083,8.097e5,0.025,4.909e-4,0.012,0.14,0</datapoint>
+          <datapoint>0.821,15.205,15.205,27.801,27.845,-12.074,12.137,0.478,7.996e-6,0.478,1.571,1.573,1.229,45,6.09e-6,0.02,-1.728e-8,0.572,6.743e-6,1.46,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.316,0.241,2.984,0,0,0.146,0.617,0.433,0.063,0.121,0.62,0.252,0.718,7.296e-6,0,0,0,0,0.033,2.093,1.571,288.051,1.011e5,1.223,340.329,0.082,8.055e5,0.025,4.909e-4,0.016,0.141,0</datapoint>
+          <datapoint>0.836,15.646,15.646,27.609,27.653,-12.073,12.102,0.503,8.189e-6,0.503,1.571,1.557,0.844,45,6.407e-6,0.012,-1.76e-8,0.627,-2.254e-5,1.451,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.317,0.241,3.039,0,0,0.144,0.617,0.433,0.063,0.121,0.618,0.149,0.412,-1.753e-4,0,0,0,0,0.04,2.123,1.571,288.048,1.011e5,1.223,340.327,0.082,8.001e5,0.025,4.909e-4,0.024,0.142,0</datapoint>
+          <datapoint>0.86,16.301,16.301,27.321,27.364,-12.092,12.095,0.54,8.468e-6,0.54,1.571,1.543,0.263,45,6.878e-6,0.001,-2.064e-8,-0.651,-1.183e-4,1.435,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.319,0.241,3.118,0,0,0.141,0.617,0.433,0.063,0.121,0.617,0.013,0.084,4.926e-4,0,0,0,0,-0.044,2.154,1.571,288.044,1.011e5,1.223,340.325,0.081,7.919e5,0.025,4.909e-4,0.036,0.143,0</datapoint>
+          <datapoint>0.896,17.271,17.271,26.887,26.931,-12.157,12.168,0.595,8.892e-6,0.595,1.571,1.549,0.528,45,7.581e-6,0.02,-2.083e-8,-0.559,-1.264e-5,1.413,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.316,0.241,2.987,0,0,0.137,0.617,0.433,0.063,0.121,0.619,0.246,0.769,1.785e-4,0,0,0,0,-0.033,2.175,1.571,288.038,1.011e5,1.223,340.321,0.08,7.796e5,0.025,4.909e-4,0.016,0.144,0</datapoint>
+          <datapoint>0.912,17.696,17.696,26.694,26.739,-12.195,12.225,0.62,9.079e-6,0.62,1.571,1.56,0.856,45,7.895e-6,0.028,-1.998e-8,-0.478,-1e-5,1.405,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.315,0.241,2.935,0,0,0.136,0.617,0.433,0.063,0.121,0.622,0.348,1.045,-1.026e-4,0,0,0,0,-0.025,2.148,1.571,288.035,1.011e5,1.223,340.319,0.079,7.74e5,0.025,4.909e-4,0.012,0.146,0</datapoint>
+          <datapoint>0.924,18.011,18.011,26.549,26.596,-12.22,12.266,0.638,9.214e-6,0.638,1.571,1.571,1.068,45,8.131e-6,0.033,-2.321e-8,-0.402,-7.823e-6,1.4,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.902,0,0,0.134,0.617,0.433,0.063,0.121,0.623,0.415,1.223,3.51e-4,0,0,0,0,-0.018,2.118,1.571,288.033,1.011e5,1.223,340.318,0.079,7.698e5,0.025,4.909e-4,0.01,0.147,0</datapoint>
+          <datapoint>0.934,18.282,18.282,26.424,26.472,-12.235,12.295,0.655,9.326e-6,0.655,1.571,1.583,1.213,45,8.336e-6,0.037,-2.323e-8,-0.329,-2.594e-6,1.396,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.879,0,0,0.133,0.617,0.433,0.063,0.121,0.625,0.463,1.346,4.445e-4,0,0,0,0,-0.012,2.093,1.571,288.031,1.011e5,1.223,340.317,0.078,7.662e5,0.025,4.909e-4,0.009,0.148,0</datapoint>
+          <datapoint>0.943,18.529,18.529,26.309,26.358,-12.242,12.313,0.67,9.424e-6,0.67,1.571,1.595,1.314,45,8.526e-6,0.039,-2.344e-8,-0.257,4.636e-6,1.393,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.862,0,0,0.133,0.617,0.433,0.063,0.121,0.626,0.498,1.434,-2.496e-4,0,0,0,0,-0.007,2.07,1.571,288.03,1.011e5,1.223,340.316,0.078,7.628e5,0.025,4.909e-4,0.009,0.149,0</datapoint>
+          <datapoint>0.952,18.763,18.763,26.201,26.25,-12.241,12.318,0.684,9.514e-6,0.684,1.571,1.607,1.373,45,8.707e-6,0.041,-2.297e-8,-0.186,1.485e-5,1.391,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.852,0,0,0.132,0.617,0.433,0.063,0.121,0.627,0.52,1.488,4.396e-4,0,0,0,0,-0.004,2.051,1.571,288.028,1.011e5,1.223,340.315,0.078,7.597e5,0.025,4.909e-4,0.009,0.15,0</datapoint>
+          <datapoint>0.961,18.988,18.988,26.095,26.145,-12.229,12.308,0.698,9.597e-6,0.698,1.571,1.619,1.386,45,8.885e-6,0.041,-2.468e-8,-0.116,1.024e-5,1.39,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.312,0.241,2.849,0,0,0.131,0.617,0.433,0.063,0.121,0.627,0.528,1.507,4.474e-4,0,0,0,0,-0.002,2.043,1.571,288.027,1.011e5,1.223,340.314,0.077,7.567e5,0.025,4.909e-4,0.009,0.151,0</datapoint>
+          <datapoint>0.97,19.212,19.212,25.99,26.041,-12.211,12.288,0.712,9.676e-6,0.712,1.571,1.63,1.372,45,9.062e-6,0.041,-2.554e-8,-0.046,6.339e-6,1.389,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.312,0.241,2.849,0,0,0.13,0.617,0.433,0.063,0.121,0.627,0.528,1.505,-1.04e-4,0,0,0,0,-2.453e-4,2.036,1.571,288.025,1.011e5,1.223,340.313,0.077,7.537e5,0.025,4.909e-4,0.009,0.152,0</datapoint>
+          <datapoint>0.978,19.437,19.437,25.884,25.936,-12.186,12.259,0.726,9.753e-6,0.726,1.571,1.642,1.334,45,9.243e-6,0.041,-2.573e-8,0.023,-3.794e-6,1.389,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.852,0,0,0.129,0.617,0.433,0.063,0.121,0.627,0.52,1.483,4.255e-5,0,0,0,0,5.895e-5,2.028,1.571,288.024,1.011e5,1.223,340.312,0.077,7.507e5,0.025,4.909e-4,0.009,0.152,0</datapoint>
+          <datapoint>0.987,19.666,19.666,25.776,25.829,-12.154,12.221,0.74,9.829e-6,0.74,1.571,1.654,1.27,45,9.429e-6,0.04,-2.601e-8,0.091,-1.374e-5,1.39,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.86,0,0,0.127,0.617,0.433,0.063,0.121,0.626,0.503,1.438,2.707e-4,0,0,0,0,9.63e-4,2.02,1.571,288.022,1.011e5,1.223,340.311,0.077,7.477e5,0.025,4.909e-4,0.009,0.153,0</datapoint>
+          <datapoint>0.996,19.903,19.903,25.664,25.718,-12.115,12.173,0.756,9.905e-6,0.756,1.571,1.665,1.18,45,9.624e-6,0.038,-2.641e-8,0.159,-9.499e-6,1.391,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.872,0,0,0.126,0.617,0.433,0.063,0.121,0.625,0.478,1.37,-1.021e-4,0,0,0,0,0.003,2.012,1.571,288.021,1.011e5,1.223,340.311,0.076,7.445e5,0.025,4.909e-4,0.01,0.154,0</datapoint>
+          <datapoint>1.006,20.153,20.153,25.546,25.601,-12.062,12.105,0.772,9.981e-6,0.772,1.571,1.676,1.027,45,9.832e-6,0.034,-2.562e-8,0.226,-1.671e-5,1.393,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.894,0,0,0.125,0.617,0.433,0.063,0.121,0.624,0.432,1.243,-1.849e-4,0,0,0,0,0.006,2.025,1.571,288.019,1.011e5,1.223,340.31,0.076,7.412e5,0.025,4.909e-4,0.011,0.154,0</datapoint>
+          <datapoint>1.017,20.43,20.43,25.416,25.472,-11.994,12.021,0.79,1.006e-5,0.79,1.571,1.686,0.812,45,1.006e-5,0.029,-2.67e-8,0.29,-2.41e-5,1.395,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.926,0,0,0.123,0.617,0.433,0.063,0.121,0.622,0.365,1.058,2.309e-4,0,0,0,0,0.01,2.054,1.571,288.017,1.011e5,1.223,340.308,0.075,7.377e5,0.025,4.909e-4,0.013,0.155,0</datapoint>
+          <datapoint>1.03,20.756,20.756,25.262,25.319,-11.912,11.924,0.812,1.015e-5,0.812,1.571,1.695,0.538,45,1.034e-5,0.023,-2.66e-8,0.352,-4.138e-5,1.4,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.315,0.241,2.97,0,0,0.121,0.617,0.433,0.063,0.121,0.62,0.278,0.811,3.814e-5,0,0,0,0,0.015,2.089,1.571,288.015,1.011e5,1.223,340.307,0.075,7.334e5,0.025,4.909e-4,0.017,0.156,0</datapoint>
+          <datapoint>1.047,21.184,21.184,25.06,25.118,-11.807,11.809,0.841,1.025e-5,0.841,1.571,1.701,0.164,45,1.071e-5,0.013,-2.327e-8,0.406,-7.169e-5,1.406,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.317,0.241,3.035,0,0,0.119,0.617,0.433,0.063,0.121,0.618,0.156,0.453,-4.275e-4,0,0,0,0,0.02,2.136,1.571,288.012,1.011e5,1.223,340.305,0.074,7.279e5,0.025,4.909e-4,0.026,0.156,0</datapoint>
+          <datapoint>1.072,21.819,21.819,24.761,24.819,-11.683,11.687,0.884,1.037e-5,0.884,1.571,1.699,0.288,45,1.126e-5,8.067e-5,-2.352e-8,0.433,-0.01,1.417,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.319,0.241,3.125,0,0,0.116,0.617,0.433,0.063,0.121,0.617,9.586e-4,-0.009,-2.163e-4,0,0,0,0,0.012,2.14,1.571,288.008,1.011e5,1.223,340.303,0.074,7.194e5,0.025,4.909e-4,0.038,0.157,0</datapoint>
+          <datapoint>1.111,22.758,22.758,24.317,24.375,-11.538,11.572,0.949,1.047e-5,0.949,1.571,1.676,0.891,45,1.208e-5,0.018,-4.124e-8,-0.369,-7.33e-5,1.433,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.316,0.241,3.002,0,0,0.113,0.617,0.433,0.063,0.121,0.619,0.217,0.669,8.78e-5,0,0,0,0,-0.018,2.146,1.571,288.002,1.011e5,1.222,340.299,0.072,7.067e5,0.025,4.909e-4,0.022,0.157,0</datapoint>
+          <datapoint>1.133,23.294,23.294,24.062,24.118,-11.472,11.534,0.986,1.049e-5,0.986,1.571,1.653,1.191,45,1.255e-5,0.027,-4.032e-8,-0.283,-5.636e-5,1.44,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.315,0.241,2.943,0,0,0.111,0.617,0.433,0.063,0.121,0.621,0.331,0.985,4.203e-4,0,0,0,0,-0.011,2.169,1.571,287.999,1.011e5,1.222,340.297,0.072,6.994e5,0.025,4.909e-4,0.015,0.158,0</datapoint>
+          <datapoint>1.148,23.663,23.663,23.886,23.941,-11.434,11.513,1.011,1.05e-5,1.011,1.571,1.633,1.347,45,1.288e-5,0.031,-3.996e-8,-0.208,-3.638e-5,1.444,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.912,0,0,0.109,0.617,0.433,0.063,0.121,0.623,0.394,1.152,2.604e-4,0,0,0,0,-0.006,2.185,1.571,287.996,1.01e5,1.222,340.296,0.071,6.944e5,0.025,4.909e-4,0.013,0.158,0</datapoint>
+          <datapoint>1.161,23.981,23.981,23.733,23.788,-11.408,11.496,1.033,1.051e-5,1.033,1.571,1.615,1.422,45,1.315e-5,0.034,-3.901e-8,-0.136,-2.176e-5,1.446,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.895,0,0,0.108,0.617,0.433,0.063,0.121,0.624,0.428,1.242,-3.556e-4,0,0,0,0,-0.002,2.186,1.571,287.994,1.01e5,1.222,340.294,0.071,6.9e5,0.025,4.909e-4,0.013,0.159,0</datapoint>
+          <datapoint>1.174,24.277,24.277,23.59,23.644,-11.385,11.478,1.053,1.052e-5,1.053,1.571,1.597,1.455,45,1.341e-5,0.035,-3.856e-8,-0.065,-1.409e-5,1.447,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.886,0,0,0.107,0.617,0.433,0.063,0.121,0.624,0.447,1.289,4.398e-4,0,0,0,0,-5.748e-4,2.185,1.571,287.992,1.01e5,1.222,340.293,0.07,6.858e5,0.025,4.909e-4,0.012,0.16,0</datapoint>
+          <datapoint>1.186,24.565,24.565,23.451,23.504,-11.365,11.458,1.072,1.054e-5,1.072,1.571,1.579,1.455,45,1.366e-5,0.036,-3.774e-8,0.005,-6.167e-6,1.448,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.883,0,0,0.106,0.617,0.433,0.063,0.121,0.624,0.453,1.307,3.973e-4,0,0,0,0,3.93e-6,2.184,1.571,287.99,1.01e5,1.222,340.292,0.07,6.818e5,0.025,4.909e-4,0.012,0.16,0</datapoint>
+          <datapoint>1.198,24.85,24.85,23.313,23.365,-11.348,11.437,1.091,1.056e-5,1.091,1.571,1.561,1.426,45,1.39e-5,0.036,-3.645e-8,0.075,-1.196e-5,1.447,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.885,0,0,0.104,0.617,0.433,0.063,0.121,0.624,0.449,1.294,-2.476e-4,0,0,0,0,7.808e-4,2.183,1.571,287.988,1.01e5,1.222,340.291,0.069,6.778e5,0.025,4.909e-4,0.012,0.161,0</datapoint>
+          <datapoint>1.211,25.14,25.14,23.171,23.223,-11.333,11.413,1.111,1.058e-5,1.111,1.571,1.544,1.343,45,1.415e-5,0.034,-3.66e-8,0.142,-1.827e-6,1.446,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.898,0,0,0.103,0.617,0.433,0.063,0.121,0.624,0.423,1.224,3.949e-4,0,0,0,0,0.003,2.164,1.571,287.987,1.01e5,1.222,340.29,0.069,6.736e5,0.025,4.909e-4,0.013,0.162,0</datapoint>
+          <datapoint>1.224,25.448,25.448,23.02,23.071,-11.32,11.386,1.131,1.061e-5,1.131,1.571,1.527,1.224,45,1.441e-5,0.031,-3.858e-8,0.209,-9.839e-6,1.443,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.917,0,0,0.101,0.617,0.433,0.063,0.121,0.622,0.384,1.113,-1.244e-4,0,0,0,0,0.006,2.142,1.571,287.985,1.01e5,1.222,340.289,0.069,6.691e5,0.025,4.909e-4,0.015,0.162,0</datapoint>
+          <datapoint>1.239,25.789,25.789,22.852,22.902,-11.309,11.359,1.154,1.065e-5,1.154,1.571,1.51,1.067,45,1.469e-5,0.026,-3.741e-8,0.273,-2.834e-5,1.44,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.315,0.241,2.944,0,0,0.1,0.617,0.433,0.063,0.121,0.621,0.328,0.956,-2.289e-4,0,0,0,0,0.011,2.117,1.571,287.982,1.01e5,1.222,340.287,0.068,6.641e5,0.025,4.909e-4,0.018,0.163,0</datapoint>
+          <datapoint>1.257,26.189,26.189,22.653,22.702,-11.298,11.332,1.18,1.071e-5,1.18,1.571,1.493,0.876,45,1.503e-5,0.021,-3.427e-8,0.335,-1.959e-5,1.434,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.316,0.241,2.98,0,0,0.098,0.617,0.433,0.063,0.121,0.62,0.258,0.752,1.748e-4,0,0,0,0,0.017,2.1,1.571,287.98,1.01e5,1.222,340.286,0.067,6.583e5,0.025,4.909e-4,0.023,0.163,0</datapoint>
+          <datapoint>1.279,26.701,26.701,22.396,22.445,-11.287,11.305,1.214,1.08e-5,1.214,1.571,1.475,0.644,45,1.546e-5,0.014,-3.029e-8,0.392,-1.633e-5,1.426,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.317,0.241,3.028,0,0,0.095,0.617,0.433,0.063,0.121,0.618,0.168,0.485,3.342e-4,0,0,0,0,0.023,2.103,1.571,287.976,1.01e5,1.222,340.284,0.067,6.509e5,0.025,4.909e-4,0.034,0.164,0</datapoint>
+          <datapoint>1.313,27.458,27.458,22.012,22.06,-11.279,11.283,1.264,1.096e-5,1.264,1.571,1.459,0.313,45,1.61e-5,0.003,-3.226e-8,0.428,-1.638e-4,1.412,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.319,0.241,3.106,0,0,0.092,0.617,0.433,0.063,0.121,0.617,0.031,0.068,-2.956e-4,0,0,0,0,0.029,2.125,1.571,287.972,1.01e5,1.222,340.281,0.066,6.4e5,0.025,4.909e-4,0.05,0.164,0</datapoint>
+          <datapoint>1.363,28.545,28.545,21.448,21.497,-11.284,11.284,1.337,1.125e-5,1.337,1.571,1.454,0.123,45,1.702e-5,0.014,-1.614e-8,-0.388,-1.967e-5,1.391,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.317,0.241,3.029,0,0,0.088,0.617,0.433,0.063,0.121,0.618,0.166,0.528,-6.345e-5,0,0,0,0,-0.025,2.139,1.571,287.964,1.01e5,1.222,340.276,0.064,6.241e5,0.025,4.909e-4,0.036,0.165,0</datapoint>
+          <datapoint>1.4,29.31,29.31,21.041,21.092,-11.306,11.315,1.389,1.15e-5,1.389,1.571,1.465,0.457,45,1.769e-5,0.027,-1.635e-8,-0.289,-2.07e-5,1.379,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.315,0.241,2.943,0,0,0.085,0.617,0.433,0.063,0.121,0.621,0.33,0.985,-4.285e-4,0,0,0,0,-0.014,2.049,1.571,287.959,1.01e5,1.222,340.273,0.063,6.121e5,0.025,4.909e-4,0.02,0.166,0</datapoint>
+          <datapoint>1.42,29.73,29.73,20.814,20.866,-11.303,11.317,1.419,1.165e-5,1.419,1.571,1.475,0.559,45,1.807e-5,0.031,-1.955e-8,-0.214,-2.335e-5,1.374,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.916,0,0,0.083,0.617,0.433,0.063,0.121,0.623,0.386,1.133,4.578e-4,0,0,0,0,-0.008,2.017,1.571,287.957,1.01e5,1.222,340.272,0.062,6.056e5,0.025,4.909e-4,0.018,0.167,0</datapoint>
+          <datapoint>1.437,30.1,30.1,20.612,20.666,-11.291,11.308,1.445,1.179e-5,1.445,1.571,1.486,0.61,45,1.84e-5,0.033,-2.518e-8,-0.142,-2.081e-5,1.371,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.9,0,0,0.082,0.617,0.433,0.063,0.12,0.623,0.417,1.214,1.634e-4,0,0,0,0,-0.004,1.99,1.571,287.954,1.01e5,1.222,340.27,0.061,5.998e5,0.025,4.909e-4,0.017,0.168,0</datapoint>
+          <datapoint>1.454,30.448,30.448,20.421,20.476,-11.275,11.293,1.47,1.192e-5,1.47,1.571,1.496,0.639,45,1.873e-5,0.035,-2.317e-8,-0.072,-1.188e-5,1.369,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.89,0,0,0.08,0.617,0.433,0.063,0.12,0.624,0.439,1.268,-9.871e-5,0,0,0,0,-9.428e-4,1.952,1.571,287.952,1.01e5,1.222,340.269,0.061,5.942e5,0.025,4.909e-4,0.017,0.169,0</datapoint>
+          <datapoint>1.471,30.784,30.784,20.235,20.291,-11.261,11.281,1.495,1.204e-5,1.495,1.571,1.507,0.68,45,1.904e-5,0.037,-2.105e-8,-5.89e-4,-9.246e-6,1.368,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.877,0,0,0.079,0.617,0.433,0.063,0.12,0.625,0.465,1.337,-2.623e-4,0,0,0,0,-6.464e-8,1.88,1.571,287.95,1.01e5,1.221,340.268,0.06,5.886e5,0.025,4.909e-4,0.016,0.17,0</datapoint>
+          <datapoint>1.487,31.106,31.106,20.055,20.112,-11.239,11.26,1.52,1.216e-5,1.52,1.571,1.518,0.689,45,1.935e-5,0.038,-1.816e-8,0.069,4.189e-7,1.369,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.872,0,0,0.077,0.617,0.433,0.063,0.12,0.625,0.476,1.365,1.034e-4,0,0,0,0,9.159e-4,1.812,1.571,287.948,1.01e5,1.221,340.266,0.06,5.833e5,0.025,4.909e-4,0.016,0.171,0</datapoint>
+          <datapoint>1.503,31.424,31.424,19.876,19.934,-11.206,11.225,1.544,1.227e-5,1.544,1.571,1.529,0.654,45,1.966e-5,0.037,-1.668e-8,0.138,-6.726e-6,1.37,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.878,0,0,0.076,0.617,0.433,0.063,0.12,0.625,0.463,1.328,-1.236e-4,0,0,0,0,0.004,1.757,1.571,287.946,1.01e5,1.221,340.265,0.059,5.78e5,0.025,4.909e-4,0.017,0.172,0</datapoint>
+          <datapoint>1.52,31.755,31.755,19.689,19.749,-11.149,11.161,1.569,1.239e-5,1.569,1.571,1.539,0.514,45,1.999e-5,0.031,-1.693e-8,0.203,-2.227e-5,1.373,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.912,0,0,0.074,0.617,0.433,0.063,0.12,0.623,0.393,1.137,-4.433e-4,0,0,0,0,0.008,1.764,1.571,287.944,1.01e5,1.221,340.264,0.059,5.728e5,0.025,4.909e-4,0.02,0.173,0</datapoint>
+          <datapoint>1.539,32.144,32.144,19.468,19.53,-11.078,11.083,1.6,1.252e-5,1.6,1.571,1.547,0.33,45,2.038e-5,0.024,-1.521e-8,0.264,-9.091e-6,1.378,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.315,0.241,2.96,0,0,0.073,0.617,0.433,0.063,0.12,0.62,0.297,0.866,3.025e-4,0,0,0,0,0.014,1.773,1.571,287.941,1.009e5,1.221,340.262,0.058,5.666e5,0.025,4.909e-4,0.027,0.174,0</datapoint>
+          <datapoint>1.566,32.658,32.658,19.175,19.237,-10.982,10.982,1.641,1.268e-5,1.641,1.571,1.552,0.052,45,2.09e-5,0.012,-1.75e-8,0.316,-2.992e-5,1.386,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.317,0.241,3.041,0,0,0.07,0.617,0.433,0.063,0.12,0.618,0.144,0.417,-1.539e-4,0,0,0,0,0.021,1.804,1.571,287.938,1.009e5,1.221,340.26,0.057,5.584e5,0.025,4.909e-4,0.04,0.174,0</datapoint>
+          <datapoint>1.606,33.416,33.416,18.738,18.802,-10.856,10.862,1.703,1.289e-5,1.703,1.571,1.546,0.368,45,2.169e-5,0.009,-1.526e-8,-0.321,-2.574e-5,1.399,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.318,0.241,3.064,0,0,0.067,0.617,0.433,0.063,0.12,0.617,0.103,0.337,-4.389e-4,0,0,0,0,-0.022,1.877,1.571,287.933,1.009e5,1.221,340.257,0.056,5.464e5,0.025,4.909e-4,0.05,0.175,0</datapoint>
+          <datapoint>1.656,34.339,34.339,18.199,18.262,-10.731,10.765,1.78,1.309e-5,1.78,1.571,1.514,0.864,45,2.267e-5,0.033,-2.378e-8,-0.21,2.839e-5,1.412,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.899,0,0,0.064,0.617,0.433,0.063,0.12,0.624,0.42,1.228,1.983e-4,0,0,0,0,-0.01,2.02,1.571,287.927,1.009e5,1.221,340.254,0.054,5.318e5,0.025,4.909e-4,0.021,0.176,0</datapoint>
+          <datapoint>1.677,34.725,34.725,17.97,18.032,-10.695,10.739,1.812,1.313e-5,1.812,1.571,1.495,0.968,45,2.308e-5,0.039,-2.546e-8,-0.135,1.52e-5,1.416,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.861,0,0,0.063,0.617,0.433,0.063,0.12,0.626,0.499,1.432,6.208e-5,0,0,0,0,-0.004,2.036,1.571,287.924,1.009e5,1.221,340.252,0.054,5.253e5,0.025,4.909e-4,0.019,0.177,0</datapoint>
+          <datapoint>1.696,35.06,35.06,17.77,17.831,-10.668,10.718,1.84,1.314e-5,1.84,1.571,1.476,1.027,45,2.343e-5,0.043,-2.309e-8,-0.063,1.853e-5,1.418,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.312,0.241,2.838,0,0,0.062,0.617,0.433,0.063,0.12,0.628,0.55,1.562,-3.556e-4,0,0,0,0,-9.402e-4,2.051,1.571,287.922,1.009e5,1.221,340.251,0.053,5.196e5,0.025,4.909e-4,0.018,0.177,0</datapoint>
+          <datapoint>1.714,35.37,35.37,17.583,17.643,-10.65,10.698,1.866,1.312e-5,1.866,1.571,1.458,1.012,45,2.376e-5,0.043,-2.355e-8,0.007,7.877e-6,1.418,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.312,0.241,2.836,0,0,0.06,0.617,0.433,0.063,0.12,0.628,0.555,1.573,-1.224e-5,0,0,0,0,1.203e-5,2.029,1.571,287.92,1.009e5,1.221,340.25,0.053,5.141e5,0.025,4.909e-4,0.018,0.178,0</datapoint>
+          <datapoint>1.731,35.682,35.682,17.393,17.453,-10.634,10.678,1.891,1.308e-5,1.891,1.571,1.44,0.961,45,2.409e-5,0.042,-2.327e-8,0.075,1.212e-5,1.418,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.312,0.241,2.845,0,0,0.059,0.617,0.433,0.063,0.12,0.627,0.535,1.521,2.961e-4,0,0,0,0,0.001,1.997,1.571,287.918,1.009e5,1.221,340.248,0.052,5.085e5,0.025,4.909e-4,0.019,0.179,0</datapoint>
+          <datapoint>1.75,36.008,36.008,17.193,17.252,-10.62,10.657,1.918,1.3e-5,1.918,1.571,1.423,0.887,45,2.443e-5,0.039,-2.317e-8,0.142,2.605e-5,1.416,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.861,0,0,0.058,0.617,0.433,0.063,0.12,0.626,0.499,1.422,-4.374e-4,0,0,0,0,0.005,1.963,1.571,287.916,1.009e5,1.221,340.247,0.052,5.026e5,0.025,4.909e-4,0.021,0.179,0</datapoint>
+          <datapoint>1.771,36.36,36.36,16.975,17.033,-10.601,10.634,1.948,1.289e-5,1.948,1.571,1.405,0.832,45,2.48e-5,0.037,-2.433e-8,0.209,2.143e-5,1.412,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.313,0.241,2.873,0,0,0.056,0.617,0.433,0.063,0.12,0.625,0.474,1.351,2.35e-4,0,0,0,0,0.011,1.97,1.571,287.914,1.009e5,1.221,340.246,0.051,4.964e5,0.025,4.909e-4,0.022,0.18,0</datapoint>
+          <datapoint>1.793,36.735,36.735,16.739,16.796,-10.584,10.611,1.979,1.273e-5,1.979,1.571,1.388,0.75,45,2.52e-5,0.034,-2.8e-8,0.275,2.525e-5,1.407,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.894,0,0,0.054,0.617,0.433,0.063,0.12,0.624,0.43,1.223,1.869e-4,0,0,0,0,0.02,1.976,1.571,287.911,1.009e5,1.221,340.244,0.05,4.897e5,0.025,4.909e-4,0.025,0.18,0</datapoint>
+          <datapoint>1.818,37.154,37.154,16.472,16.529,-10.572,10.589,2.013,1.25e-5,2.013,1.571,1.37,0.614,45,2.564e-5,0.028,-3.181e-8,0.338,3.312e-5,1.399,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.315,0.241,2.936,0,0,0.053,0.617,0.433,0.063,0.12,0.622,0.343,0.976,-4.847e-4,0,0,0,0,0.032,1.96,1.571,287.908,1.009e5,1.221,340.243,0.049,4.819e5,0.025,4.909e-4,0.033,0.181,0</datapoint>
+          <datapoint>1.851,37.686,37.686,16.127,16.183,-10.562,10.571,2.058,1.215e-5,2.058,1.571,1.353,0.42,45,2.621e-5,0.017,-2.942e-8,0.392,6.761e-5,1.387,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.316,0.241,3.007,0,0,0.05,0.617,0.433,0.063,0.12,0.619,0.207,0.578,-6.656e-5,0,0,0,0,0.045,1.931,1.571,287.905,1.009e5,1.221,340.24,0.048,4.72e5,0.025,4.909e-4,0.049,0.182,0</datapoint>
+          <datapoint>1.9,38.464,38.464,15.61,15.667,-10.541,10.544,2.124,1.153e-5,2.124,1.571,1.337,0.246,45,2.705e-5,0.006,-2.087e-8,0.43,1.834e-4,1.367,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.318,0.241,3.081,0,0,0.047,0.617,0.433,0.064,0.12,0.617,0.074,0.17,-2.208e-4,0,0,0,0,0.057,1.997,1.571,287.9,1.009e5,1.221,340.237,0.047,4.577e5,0.025,4.909e-4,0.05,0.182,0</datapoint>
+          <datapoint>1.95,39.231,39.231,15.082,15.141,-10.553,10.553,2.19,1.079e-5,2.19,1.571,1.332,0.034,45,2.79e-5,0.014,-1.698e-8,-0.41,7.948e-5,1.345,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.317,0.241,3.026,0,0,0.044,0.617,0.433,0.064,0.12,0.618,0.171,0.575,-9.26e-5,0,0,0,0,-0.056,1.906,1.571,287.895,1.009e5,1.221,340.234,0.045,4.423e5,0.025,4.909e-4,0.05,0.183,0</datapoint>
+          <datapoint>2,39.972,39.972,14.555,14.616,-10.534,10.535,2.257,1e-5,2.257,1.571,1.336,0.126,45,2.874e-5,0.022,-2.238e-8,-0.346,3.47e-5,1.326,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.316,0.241,2.972,0,0,0.041,0.617,0.433,0.064,0.12,0.62,0.274,0.856,-1.332e-5,0,0,0,0,-0.042,1.955,1.571,287.89,1.009e5,1.22,340.231,0.044,4.279e5,0.025,4.909e-4,0.047,0.183,0</datapoint>
+          <datapoint>2.047,40.648,40.648,14.057,14.122,-10.522,10.524,2.321,9.258e-6,2.321,1.571,1.345,0.222,45,2.955e-5,0.031,-2.141e-8,-0.265,1.734e-5,1.312,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.913,0,0,0.039,0.617,0.433,0.064,0.12,0.623,0.391,1.165,-3.013e-5,0,0,0,0,-0.026,1.915,1.571,287.886,1.008e5,1.22,340.229,0.042,4.137e5,0.025,4.909e-4,0.037,0.184,0</datapoint>
+          <datapoint>2.084,41.163,41.163,13.667,13.734,-10.479,10.48,2.371,8.703e-6,2.371,1.571,1.352,0.175,45,3.019e-5,0.029,-2.194e-8,-0.199,1.6e-5,1.303,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.929,0,0,0.037,0.617,0.433,0.064,0.12,0.622,0.358,1.062,-2.425e-4,0,0,0,0,-0.016,1.978,1.571,287.882,1.008e5,1.22,340.227,0.041,4.033e5,0.025,4.909e-4,0.043,0.185,0</datapoint>
+          <datapoint>2.127,41.739,41.739,13.22,13.289,-10.433,10.434,2.429,8.126e-6,2.429,1.571,1.359,0.139,45,3.093e-5,0.027,-1.806e-8,-0.135,8.467e-6,1.296,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.315,0.241,2.941,0,0,0.035,0.617,0.433,0.064,0.12,0.622,0.334,0.989,3.243e-4,0,0,0,0,-0.008,1.988,1.571,287.879,1.008e5,1.22,340.224,0.04,3.909e5,0.025,4.909e-4,0.049,0.185,0</datapoint>
+          <datapoint>2.176,42.374,42.374,12.71,12.783,-10.356,10.356,2.495,7.575e-6,2.495,1.571,1.364,0.014,45,3.178e-5,0.016,-2.835e-8,-0.075,-6.346e-6,1.291,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.317,0.241,3.013,0,0,0.032,0.617,0.433,0.064,0.12,0.619,0.195,0.591,-1.728e-4,0,0,0,0,-0.003,2.069,1.571,287.875,1.008e5,1.22,340.222,0.039,3.774e5,0.025,4.909e-4,0.05,0.186,0</datapoint>
+          <datapoint>2.226,42.997,42.997,12.194,12.27,-10.284,10.285,2.564,7.147e-6,2.564,1.571,1.36,0.096,45,3.265e-5,0.004,-2.736e-8,-0.056,-8.575e-5,1.288,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.319,0.241,3.093,0,0,0.03,0.618,0.433,0.064,0.12,0.618,0.052,0.163,4.663e-4,0,0,0,0,-0.002,2.127,1.571,287.871,1.008e5,1.22,340.22,0.037,3.636e5,0.025,4.909e-4,0.05,0.189,0</datapoint>
+          <datapoint>2.276,43.594,43.594,11.681,11.76,-10.239,10.239,2.631,6.843e-6,2.631,1.571,1.355,0.12,45,3.351e-5,8.295e-4,-2.814e-8,-0.051,-2.968e-4,1.285,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.319,0.241,3.118,0,0,0.027,0.619,0.435,0.064,0.12,0.619,0.01,0.032,1.159e-4,0,0,0,0,-0.001,2.065,1.571,287.867,1.008e5,1.22,340.217,0.036,3.489e5,0.025,4.909e-4,0.05,0.19,0</datapoint>
+          <datapoint>2.326,44.165,44.165,11.17,11.252,-10.186,10.188,2.699,6.624e-6,2.699,1.571,1.348,0.183,45,3.437e-5,0.008,-2.91e-8,0.055,1.8e-5,1.283,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.318,0.241,3.065,0,0,0.025,0.623,0.439,0.064,0.12,0.624,0.101,0.307,-2.947e-6,0,0,0,0,0.002,2.065,1.571,287.863,1.008e5,1.22,340.215,0.034,3.348e5,0.025,4.909e-4,0.05,0.19,0</datapoint>
+          <datapoint>2.376,44.711,44.711,10.663,10.746,-10.128,10.132,2.766,6.449e-6,2.766,1.571,1.336,0.275,45,3.523e-5,0.022,-2.769e-8,0.083,4.684e-5,1.279,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.315,0.241,2.97,0,0,0.024,0.627,0.443,0.064,0.12,0.63,0.277,0.819,-8.946e-5,0,0,0,0,0.004,2.126,1.571,287.859,1.008e5,1.22,340.213,0.033,3.213e5,0.025,4.909e-4,0.05,0.191,0</datapoint>
+          <datapoint>2.426,45.231,45.231,10.157,10.243,-10.097,10.101,2.833,6.277e-6,2.833,1.571,1.322,0.266,45,3.607e-5,0.024,-2.68e-8,0.129,6.16e-5,1.274,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.315,0.241,2.957,0,0,0.022,0.632,0.448,0.064,0.12,0.636,0.301,0.879,-2.007e-4,0,0,0,0,0.011,2.057,1.571,287.856,1.008e5,1.22,340.211,0.031,3.068e5,0.025,4.909e-4,0.05,0.191,0</datapoint>
+          <datapoint>2.476,45.727,45.727,9.653,9.741,-10.089,10.091,2.898,6.067e-6,2.898,1.571,1.311,0.175,45,3.691e-5,0.013,-3.049e-8,0.158,1.02e-4,1.267,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.317,0.241,3.03,0,0,0.02,0.637,0.453,0.065,0.12,0.639,0.163,0.476,-3.393e-4,0,0,0,0,0.019,1.862,1.571,287.853,1.008e5,1.22,340.209,0.03,2.912e5,0.025,4.909e-4,0.05,0.192,0</datapoint>
+          <datapoint>2.526,46.197,46.197,9.149,9.241,-10.064,10.065,2.964,5.792e-6,2.964,1.571,1.303,0.156,45,3.774e-5,0.012,-3.067e-8,0.17,1.45e-4,1.259,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.317,0.241,3.037,0,0,0.018,0.643,0.458,0.065,0.12,0.644,0.151,0.433,7.75e-5,0,0,0,0,0.024,1.776,1.571,287.85,1.008e5,1.22,340.207,0.028,2.766e5,0.025,4.909e-4,0.05,0.193,0</datapoint>
+          <datapoint>2.576,46.642,46.642,8.646,8.743,-10.029,10.031,3.029,5.427e-6,3.029,1.571,1.295,0.178,45,3.857e-5,0.02,-3.042e-8,0.191,1.324e-4,1.25,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.316,0.241,2.989,0,0,0.016,0.648,0.463,0.065,0.12,0.651,0.24,0.684,-1.127e-4,0,0,0,0,0.034,1.772,1.571,287.847,1.008e5,1.22,340.205,0.027,2.629e5,0.025,4.909e-4,0.05,0.193,0</datapoint>
+          <datapoint>2.626,47.061,47.061,8.146,8.247,-9.993,9.995,3.093,4.955e-6,3.093,1.571,1.285,0.209,45,3.939e-5,0.03,-3.289e-8,0.215,1.131e-4,1.239,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.314,0.241,2.923,0,0,0.015,0.654,0.469,0.065,0.12,0.66,0.368,1.029,-2.396e-4,0,0,0,0,0.048,1.789,1.571,287.844,1.008e5,1.22,340.204,0.026,2.495e5,0.025,4.909e-4,0.05,0.194,0</datapoint>
+          <datapoint>2.676,47.456,47.456,7.647,7.752,-9.947,9.951,3.157,4.367e-6,3.157,1.571,1.273,0.278,45,4.021e-5,0.05,-3.108e-8,0.252,9.089e-5,1.228,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.311,0.241,2.798,0,0,0.014,0.66,0.475,0.065,0.12,0.675,0.64,1.718,-2.953e-4,0,0,0,0,0.073,1.894,1.571,287.842,1.008e5,1.22,340.202,0.024,2.372e5,0.025,4.909e-4,0.05,0.195,0</datapoint>
+          <datapoint>2.726,47.826,47.826,7.151,7.261,-9.916,9.92,3.22,3.657e-6,3.22,1.571,1.258,0.295,45,4.101e-5,0.061,-3.164e-8,0.303,7.604e-5,1.214,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.31,0.241,2.733,0,0,0.013,0.666,0.481,0.065,0.12,0.688,0.795,2.055,-2.323e-4,0,0,0,0,0.118,1.914,1.571,287.839,1.008e5,1.22,340.201,0.023,2.242e5,0.025,4.909e-4,0.05,0.195,0</datapoint>
+          <datapoint>2.776,48.171,48.171,6.656,6.771,-9.891,9.895,3.283,2.83e-6,3.283,1.571,1.244,0.292,45,4.181e-5,0.068,-3.001e-8,0.349,7.422e-5,1.198,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.308,0.241,2.687,0,0,0.011,0.673,0.488,0.066,0.12,0.701,0.909,2.268,4.56e-4,0,0,0,0,0.176,1.903,1.571,287.837,1.008e5,1.219,340.199,0.022,2.11e5,0.025,4.909e-4,0.05,0.196,0</datapoint>
+          <datapoint>2.826,48.492,48.492,6.162,6.283,-9.861,9.866,3.345,1.898e-6,3.345,1.571,1.229,0.309,45,4.26e-5,0.083,-3.087e-8,0.399,5.752e-5,1.179,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.306,0.241,2.607,0,0,0.01,0.681,0.495,0.066,0.12,0.72,1.126,2.678,-3.606e-4,0,0,0,0,0.26,1.939,1.571,287.835,1.008e5,1.219,340.198,0.02,1.985e5,0.025,4.909e-4,0.05,0.196,0</datapoint>
+          <datapoint>2.876,48.788,48.788,5.669,5.798,-9.836,9.841,3.406,8.726e-7,3.406,1.571,1.213,0.311,45,4.337e-5,0.096,-2.894e-8,0.448,4.546e-5,1.158,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.305,0.241,2.54,0,0,0.009,0.689,0.502,0.066,0.12,0.739,1.323,2.986,-3.797e-5,0,0,0,0,0.373,1.948,1.571,287.833,1.008e5,1.219,340.197,0.019,1.86e5,0.025,4.909e-4,0.05,0.197,0</datapoint>
+          <datapoint>2.926,49.059,49.059,5.178,5.315,-9.823,9.827,3.466,-2.302e-7,3.466,1.571,1.198,0.279,45,4.414e-5,0.1,-2.997e-8,0.495,3.79e-5,1.134,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.304,0.241,2.519,0,0,0.008,0.698,0.512,0.066,0.12,0.753,1.387,2.964,2.829e-5,0,0,0,0,0.529,1.88,1.571,287.831,1.007e5,1.219,340.196,0.018,1.726e5,0.025,4.909e-4,0.05,0.198,0</datapoint>
+          <datapoint>2.976,49.305,49.305,4.687,4.835,-9.807,9.811,3.526,-1.394e-6,3.526,1.571,1.185,0.26,45,4.49e-5,0.109,-2.913e-8,0.532,2.519e-5,1.108,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.303,0.241,2.474,0,0,0.007,0.708,0.521,0.067,0.12,0.772,1.53,3.07,-1.169e-4,0,0,0,0,0.716,1.825,1.571,287.83,1.007e5,1.219,340.195,0.016,1.596e5,0.025,4.909e-4,0.05,0.198,0</datapoint>
+          <datapoint>3.026,49.527,49.527,4.197,4.358,-9.789,9.792,3.585,-2.603e-6,3.585,1.571,1.172,0.251,45,4.565e-5,0.124,-2.951e-8,0.569,1.548e-5,1.081,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.301,0.241,2.401,0,0,0.006,0.719,0.532,0.067,0.12,0.8,1.782,3.314,-4.431e-4,0,0,0,0,0.962,1.784,1.571,287.828,1.007e5,1.219,340.194,0.015,1.471e5,0.025,4.909e-4,0.05,0.199,0</datapoint>
+          <datapoint>3.076,49.725,49.725,3.708,3.885,-9.762,9.766,3.643,-3.845e-6,3.643,1.571,1.16,0.263,45,4.639e-5,0.152,-3.001e-8,0.601,4.375e-6,1.052,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.298,0.241,2.272,0,0,0.006,0.73,0.542,0.067,0.12,0.844,2.277,3.91,-3.058e-4,0,0,0,0,1.263,1.786,1.571,287.827,1.007e5,1.219,340.193,0.014,1.357e5,0.025,4.909e-4,0.05,0.2,0</datapoint>
+          <datapoint>3.126,49.898,49.898,3.221,3.419,-9.717,9.722,3.701,-5.109e-6,3.701,1.571,1.145,0.311,45,4.713e-5,0.204,-2.942e-8,0.637,-6.659e-6,1.021,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.293,0.241,2.063,0,0,0.005,0.74,0.552,0.068,0.12,0.91,3.264,5.104,-4.64e-4,0,0,0,0,1.63,1.88,1.571,287.826,1.007e5,1.219,340.192,0.013,1.266e5,0.025,4.909e-4,0.05,0.2,0</datapoint>
+          <datapoint>3.176,50.047,50.047,2.737,2.96,-9.676,9.682,3.757,-6.389e-6,3.757,1.571,1.129,0.34,45,4.785e-5,0.255,-2.946e-8,0.677,-1.539e-5,0.988,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.288,0.241,1.886,0,0,0.005,0.751,0.563,0.068,0.12,0.964,4.339,6.038,-2.261e-4,0,0,0,0,2.147,1.914,1.571,287.825,1.007e5,1.219,340.192,0.012,1.172e5,0.025,4.909e-4,0.05,0.201,0</datapoint>
+          <datapoint>3.226,50.172,50.172,2.254,2.513,-9.644,9.65,3.813,-7.677e-6,3.813,1.571,1.112,0.345,45,4.856e-5,0.306,-2.952e-8,0.715,-1.908e-5,0.953,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.285,0.241,1.736,0,0,0.004,0.764,0.576,0.069,0.12,0.993,5.49,6.663,4.787e-5,0,0,0,0,2.868,1.871,1.571,287.824,1.007e5,1.219,340.191,0.011,1.071e5,0.025,4.909e-4,0.05,0.202,0</datapoint>
+          <datapoint>3.276,50.273,50.273,1.772,2.083,-9.597,9.604,3.869,-8.967e-6,3.869,1.571,1.094,0.368,45,4.927e-5,0.383,-2.937e-8,0.749,-2.39e-5,0.916,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.28,0.241,1.546,0,0,0.004,0.775,0.586,0.069,0.12,0.983,7.06,6.036,1.054e-4,0,0,0,0,3.622,1.905,1.571,287.823,1.007e5,1.219,340.191,0.01,9.98e4,0.025,4.909e-4,0.05,0.203,0</datapoint>
+          <datapoint>3.326,50.349,50.349,1.294,1.682,-9.561,9.568,3.923,-1.025e-5,3.923,1.571,1.075,0.37,45,4.996e-5,0.469,-2.95e-8,0.768,-2.627e-5,0.878,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.276,0.241,1.376,0,0,0.003,0.786,0.597,0.07,0.12,0.929,8.55,2.696,-1.08e-4,0,0,0,0,4.382,1.906,1.571,287.823,1.007e5,1.219,340.191,0.01,9.31e4,0.025,4.909e-4,0.05,0.203,0</datapoint>
+          <datapoint>3.376,50.402,50.402,0.817,1.335,-9.503,9.511,3.976,-1.154e-5,3.976,1.571,1.057,0.395,45,5.064e-5,0.573,-2.949e-8,0.772,-2.896e-5,0.84,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.272,0.241,1.22,0,0,0.002,0.794,0.604,0.07,0.12,0.818,10.577,-1.07,9.27e-5,0,0,0,0,4.862,1.932,1.571,287.822,1.007e5,1.219,340.19,0.009,8.877e4,0.025,4.909e-4,0.05,0.204,0</datapoint>
+          <datapoint>3.426,50.431,50.431,0.344,1.091,-9.428,9.438,4.028,-1.281e-5,4.028,1.571,1.035,0.433,45,5.13e-5,0.687,-2.946e-8,0.761,-2.996e-5,0.802,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.269,0.241,1.097,0,0,0.002,0.799,0.609,0.07,0.12,0.665,12.982,-4.918,-1.056e-4,0,0,0,0,5.021,1.951,1.571,287.822,1.007e5,1.219,340.19,0.009,8.613e4,0.025,4.909e-4,0.05,0.204,0</datapoint>
+          <datapoint>3.476,50.436,50.436,-0.129,1.024,-9.66,9.661,4.08,-1.406e-5,4.08,1.571,1.016,0.169,45,5.195e-5,0.808,-2.955e-8,0.744,-3.051e-5,0.764,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.321,0.241,3.177,0,0,0.001,0.802,0.612,0.07,0.12,0.494,5.216,1.834,-1.206e-5,0,0,0,0,4.966,1.936,1.571,287.822,1.007e5,1.219,340.19,0.009,8.464e4,0.025,4.909e-4,0.05,0.205,0</datapoint>
+          <datapoint>3.526,50.418,50.418,-0.611,1.178,-9.633,9.635,4.13,-1.531e-5,4.13,1.571,1.007,0.173,45,5.26e-5,0.93,-2.954e-8,0.748,-3.004e-5,0.727,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.322,0.241,3.22,0,0,8.994e-4,0.798,0.608,0.07,0.12,0.329,5.468,0.677,7.997e-5,0,0,0,0,4.796,1.955,1.571,287.822,1.007e5,1.219,340.19,0.009,8.664e4,0.025,4.909e-4,0.05,0.206,0</datapoint>
+          <datapoint>3.576,50.375,50.375,-1.092,1.479,-9.598,9.6,4.18,-1.656e-5,4.18,1.571,0.998,0.184,45,5.324e-5,1.043,-2.953e-8,0.749,-2.992e-5,0.689,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.323,0.241,3.261,0,0,6.017e-4,0.791,0.601,0.07,0.12,0.202,5.702,-0.022,4.337e-4,0,0,0,0,4.416,1.962,1.571,287.823,1.007e5,1.219,340.19,0.009,9.04e4,0.025,4.909e-4,0.05,0.206,0</datapoint>
+          <datapoint>3.626,50.309,50.309,-1.57,1.856,-9.55,9.552,4.23,-1.78e-5,4.23,1.571,0.989,0.204,45,5.387e-5,1.138,-2.953e-8,0.748,-2.896e-5,0.652,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.324,0.241,3.291,0,0,4.005e-4,0.781,0.592,0.069,0.12,0.119,5.924,-0.315,2.086e-4,0,0,0,0,3.885,1.982,1.571,287.823,1.007e5,1.219,340.191,0.01,9.628e4,0.025,4.909e-4,0.05,0.207,0</datapoint>
+          <datapoint>3.676,50.218,50.218,-2.046,2.268,-9.484,9.487,4.279,-1.903e-5,4.279,1.571,0.978,0.233,45,5.449e-5,1.212,-2.952e-8,0.746,-2.841e-5,0.615,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.324,0.241,3.302,0,0,2.776e-4,0.769,0.58,0.069,0.12,0.07,6.144,-0.345,-3.822e-4,0,0,0,0,3.305,2.027,1.571,287.824,1.007e5,1.219,340.191,0.011,1.042e5,0.025,4.909e-4,0.05,0.207,0</datapoint>
+          <datapoint>3.726,50.104,50.104,-2.519,2.697,-9.396,9.4,4.328,-2.025e-5,4.328,1.571,0.965,0.271,45,5.511e-5,1.264,-2.95e-8,0.745,-2.775e-5,0.577,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.324,0.241,3.291,0,0,2.117e-4,0.755,0.567,0.068,0.12,0.045,6.372,-0.259,1.738e-4,0,0,0,0,2.757,2.106,1.571,287.824,1.007e5,1.219,340.192,0.012,1.138e5,0.025,4.909e-4,0.004,0.208,0</datapoint>
+          <datapoint>3.73,50.095,50.095,-2.553,2.729,-9.389,9.393,4.331,-2.034e-5,4.331,1.571,0.964,0.274,45,5.516e-5,1.267,-2.95e-8,0.744,-2.773e-5,0.575,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0.323,0.241,3.289,0,0,2.082e-4,0.754,0.566,0.068,0.12,0.044,6.39,-0.252,-4.588e-4,0,0,0,0,2.72,2.112,1.571,287.824,1.007e5,1.219,340.192,0.012,1.145e5,0.025,4.909e-4,0.003,0.209,0</datapoint>
+          <datapoint>3.733,50.089,50.089,-2.577,2.751,-3.979,8.021,4.334,-2.04e-5,4.334,1.571,0.963,6.964,45,5.519e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.556,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.116,1.571,287.824,1.007e5,1.219,340.192,0.012,1.15e5,0.025,4.909e-4,0.125,0.211,0</datapoint>
+          <datapoint>3.857,49.736,49.736,-3.073,3.074,-3.188,5.848,4.4,-2.301e-5,4.4,1.571,0.095,4.902,45,5.603e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.504,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.181,1.571,287.827,1.007e5,1.219,340.193,0.011,1.096e5,0.025,4.909e-4,0.171,0.212,0</datapoint>
+          <datapoint>4.028,49.164,49.164,-3.618,3.693,-1.89,3.625,4.344,-2.545e-5,4.344,1.571,0.743,3.093,45,5.532e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.52,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.157,1.571,287.83,1.007e5,1.219,340.195,0.011,1.113e5,0.025,4.909e-4,0.245,0.212,0</datapoint>
+          <datapoint>4.274,48.22,48.22,-4.082,4.349,-0.376,0.997,4.069,-2.743e-5,4.069,1.571,1.502,0.923,45,5.182e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.58,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.902,1.571,287.837,1.008e5,1.219,340.199,0.012,1.175e5,0.025,4.909e-4,0.217,0.212,0</datapoint>
+          <datapoint>4.491,47.323,47.323,-4.163,4.498,-0.016,0.697,3.72,-2.827e-5,3.72,1.571,1.703,0.697,45,4.738e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.999,1.571,287.842,1.008e5,1.22,340.202,0.012,1.196e5,0.025,4.909e-4,0.213,0.213,0</datapoint>
+          <datapoint>4.704,46.435,46.435,-4.167,4.56,-0.024,0.035,3.342,-2.867e-5,3.342,1.571,1.851,0.025,45,4.255e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.599,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.841,1.571,287.848,1.008e5,1.22,340.206,0.012,1.194e5,0.025,4.909e-4,0.213,0.213,0</datapoint>
+          <datapoint>4.917,45.547,45.547,-4.172,4.562,0.003,0.185,2.948,-2.888e-5,2.948,1.571,1.846,0.185,45,3.754e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.925,1.571,287.854,1.008e5,1.22,340.209,0.012,1.196e5,0.025,4.909e-4,0.213,0.214,0</datapoint>
+          <datapoint>5.13,44.66,44.66,-4.171,4.578,0.007,0.396,2.551,-2.898e-5,2.551,1.571,1.885,0.396,45,3.249e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.054,1.571,287.86,1.008e5,1.22,340.213,0.012,1.197e5,0.025,4.909e-4,0.213,0.214,0</datapoint>
+          <datapoint>5.343,43.773,43.773,-4.17,4.612,-0.002,0.307,2.141,-2.903e-5,2.141,1.571,1.97,0.307,45,2.727e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.1,1.571,287.865,1.008e5,1.22,340.216,0.012,1.196e5,0.025,4.909e-4,0.213,0.214,0</datapoint>
+          <datapoint>5.555,42.886,42.886,-4.17,4.64,-0.004,0.051,1.715,-2.905e-5,1.715,1.571,2.035,0.051,45,2.184e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.057,1.571,287.871,1.008e5,1.22,340.22,0.012,1.195e5,0.025,4.909e-4,0.213,0.214,0</datapoint>
+          <datapoint>5.768,41.998,41.998,-4.171,4.646,8.056e-4,0.05,1.281,-2.907e-5,1.281,1.571,2.046,0.05,45,1.631e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.025,1.571,287.877,1.008e5,1.22,340.223,0.012,1.196e5,0.025,4.909e-4,0.213,0.215,0</datapoint>
+          <datapoint>5.981,41.111,41.111,-4.171,4.641,0.015,0.537,0.847,-2.907e-5,0.847,1.571,2.035,0.537,45,1.079e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.602,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.263,1.571,287.883,1.008e5,1.22,340.227,0.012,1.198e5,0.025,4.909e-4,0.213,0.215,0</datapoint>
+          <datapoint>6.193,40.225,40.225,-4.168,4.689,-0.001,0.495,0.402,-2.908e-5,0.402,1.571,2.149,0.495,45,5.121e-6,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.36,1.571,287.889,1.009e5,1.22,340.23,0.012,1.196e5,0.025,4.909e-4,0.213,0.215,0</datapoint>
+          <datapoint>6.406,39.338,39.338,-4.168,4.739,-0.008,0.275,-0.066,-2.908e-5,0.066,4.712,2.255,0.275,45,-8.465e-7,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.372,1.571,287.894,1.009e5,1.221,340.234,0.012,1.196e5,0.025,4.909e-4,0.213,0.216,0</datapoint>
+          <datapoint>6.619,38.451,38.451,-4.17,4.768,2.391e-5,0.245,-0.552,-2.908e-5,0.552,4.712,2.313,0.245,45,-7.035e-6,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.209,1.571,287.9,1.009e5,1.221,340.237,0.012,1.196e5,0.025,4.909e-4,0.5,0.216,0</datapoint>
+          <datapoint>7.119,36.366,36.366,-4.17,4.71,0.005,0.345,-1.678,-2.908e-5,1.678,4.712,2.19,0.345,45,-2.137e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.044,1.571,287.914,1.009e5,1.221,340.246,0.012,1.197e5,0.025,4.909e-4,0.213,0.216,0</datapoint>
+          <datapoint>7.332,35.479,35.479,-4.169,4.675,-0.003,0.188,-2.136,-2.908e-5,2.136,4.712,2.117,0.188,45,-2.721e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.037,1.571,287.919,1.009e5,1.221,340.249,0.012,1.196e5,0.025,4.909e-4,0.213,0.216,0</datapoint>
+          <datapoint>7.544,34.593,34.593,-4.169,4.658,-5.138e-4,0.097,-2.582,-2.908e-5,2.582,4.712,2.077,0.097,45,-3.288e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.036,1.571,287.925,1.009e5,1.221,340.253,0.012,1.196e5,0.025,4.909e-4,0.213,0.216,0</datapoint>
+          <datapoint>7.757,33.706,33.706,-4.169,4.649,0.001,0.115,-3.022,-2.908e-5,3.022,4.712,2.057,0.115,45,-3.848e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.105,1.571,287.931,1.009e5,1.221,340.256,0.012,1.196e5,0.025,4.909e-4,0.213,0.216,0</datapoint>
+          <datapoint>7.969,32.82,32.82,-4.169,4.66,0.003,0.231,-3.461,-2.908e-5,3.461,4.712,2.081,0.231,45,-4.408e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.983,1.571,287.937,1.009e5,1.221,340.26,0.012,1.196e5,0.025,4.909e-4,0.213,0.217,0</datapoint>
+          <datapoint>8.182,31.934,31.934,-4.169,4.637,0.006,0.406,-3.899,-2.908e-5,3.899,4.712,2.032,0.406,45,-4.965e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.859,1.571,287.942,1.01e5,1.221,340.263,0.012,1.197e5,0.025,4.909e-4,0.213,0.217,0</datapoint>
+          <datapoint>8.395,31.048,31.048,-4.167,4.599,-0.002,0.319,-4.321,-2.908e-5,4.321,4.712,1.946,0.319,45,-5.503e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.81,1.571,287.948,1.01e5,1.221,340.267,0.012,1.196e5,0.025,4.909e-4,0.213,0.217,0</datapoint>
+          <datapoint>8.607,30.161,30.161,-4.168,4.571,-0.004,0.108,-4.728,-2.908e-5,4.728,4.712,1.878,0.108,45,-6.021e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.924,1.571,287.954,1.01e5,1.222,340.27,0.012,1.196e5,0.025,4.909e-4,0.213,0.217,0</datapoint>
+          <datapoint>8.82,29.275,29.275,-4.169,4.581,0.004,0.267,-5.13,-2.908e-5,5.13,4.712,1.901,0.267,45,-6.532e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.787,1.571,287.96,1.01e5,1.222,340.274,0.012,1.197e5,0.025,4.909e-4,0.213,0.217,0</datapoint>
+          <datapoint>9.032,28.389,28.389,-4.168,4.557,-0.002,0.158,-5.528,-2.908e-5,5.528,4.712,1.844,0.158,45,-7.039e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.911,1.571,287.965,1.01e5,1.222,340.277,0.012,1.196e5,0.025,4.909e-4,0.213,0.217,0</datapoint>
+          <datapoint>9.245,27.503,27.503,-4.168,4.571,0.009,0.441,-5.923,-2.908e-5,5.923,4.712,1.878,0.441,45,-7.543e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.065,1.571,287.971,1.01e5,1.222,340.281,0.012,1.197e5,0.025,4.909e-4,0.213,0.218,0</datapoint>
+          <datapoint>9.458,26.618,26.618,-4.166,4.609,-0.008,0.171,-6.332,-2.908e-5,6.332,4.712,1.971,0.171,45,-8.064e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.044,1.571,287.977,1.01e5,1.222,340.284,0.012,1.196e5,0.025,4.909e-4,0.213,0.218,0</datapoint>
+          <datapoint>9.67,25.732,25.732,-4.168,4.626,-8.34e-6,0.115,-6.755,-2.908e-5,6.755,4.712,2.007,0.115,45,-8.602e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.959,1.571,287.983,1.01e5,1.222,340.288,0.012,1.196e5,0.025,4.909e-4,0.5,0.218,0</datapoint>
+          <datapoint>10.17,23.648,23.648,-4.168,4.601,0.001,0.031,-7.744,-2.908e-5,7.744,4.712,1.95,0.031,45,-9.862e-5,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.963,1.571,287.996,1.01e5,1.222,340.296,0.012,1.196e5,0.025,4.909e-4,0.212,0.218,0</datapoint>
+          <datapoint>10.383,22.762,22.762,-4.167,4.604,0.011,0.451,-8.159,-2.908e-5,8.159,4.712,1.957,0.45,45,-1.039e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.602,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.148,1.571,288.002,1.011e5,1.222,340.299,0.012,1.198e5,0.025,4.909e-4,0.212,0.218,0</datapoint>
+          <datapoint>10.595,21.877,21.877,-4.165,4.643,-2.111e-4,0.427,-8.585,-2.908e-5,8.585,4.712,2.052,0.427,45,-1.093e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.871,1.571,288.008,1.011e5,1.223,340.303,0.012,1.197e5,0.025,4.909e-4,0.213,0.218,0</datapoint>
+          <datapoint>10.808,20.991,20.991,-4.165,4.604,-0.004,0.309,-9.012,-2.908e-5,9.012,4.712,1.961,0.309,45,-1.148e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.83,1.571,288.014,1.011e5,1.223,340.306,0.012,1.197e5,0.025,4.909e-4,0.213,0.219,0</datapoint>
+          <datapoint>11.02,20.106,20.106,-4.166,4.577,0.001,0.323,-9.422,-2.908e-5,9.422,4.712,1.896,0.323,45,-1.2e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.759,1.571,288.019,1.011e5,1.223,340.31,0.012,1.197e5,0.025,4.909e-4,0.213,0.219,0</datapoint>
+          <datapoint>11.233,19.221,19.221,-4.166,4.549,-0.004,0.084,-9.817,-2.908e-5,9.817,4.712,1.827,0.084,45,-1.25e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.863,1.571,288.025,1.011e5,1.223,340.313,0.012,1.196e5,0.025,4.909e-4,0.212,0.219,0</datapoint>
+          <datapoint>11.445,18.336,18.336,-4.167,4.557,4.899e-4,0.028,-10.208,-2.908e-5,10.208,4.712,1.845,0.028,45,-1.3e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.857,1.571,288.031,1.011e5,1.223,340.317,0.012,1.197e5,0.025,4.909e-4,0.212,0.219,0</datapoint>
+          <datapoint>11.658,17.45,17.45,-4.166,4.559,0.001,0.09,-10.6,-2.908e-5,10.6,4.712,1.851,0.09,45,-1.35e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.889,1.571,288.037,1.011e5,1.223,340.32,0.012,1.197e5,0.025,4.909e-4,0.212,0.219,0</datapoint>
+          <datapoint>11.87,16.565,16.565,-4.166,4.567,0.004,0.25,-10.995,-2.908e-5,10.995,4.712,1.87,0.25,45,-1.4e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.976,1.571,288.042,1.011e5,1.223,340.324,0.012,1.197e5,0.025,4.909e-4,0.212,0.219,0</datapoint>
+          <datapoint>12.083,15.681,15.681,-4.165,4.588,0.001,0.273,-11.398,-2.908e-5,11.398,4.712,1.923,0.273,45,-1.452e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.039,1.571,288.048,1.011e5,1.223,340.327,0.012,1.197e5,0.025,4.909e-4,0.212,0.22,0</datapoint>
+          <datapoint>12.295,14.796,14.796,-4.165,4.612,0.003,0.332,-11.813,-2.908e-5,11.813,4.712,1.981,0.332,45,-1.504e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.84,1.571,288.054,1.012e5,1.223,340.331,0.012,1.197e5,0.025,4.909e-4,0.212,0.22,0</datapoint>
+          <datapoint>12.507,13.911,13.911,-4.165,4.582,-0.002,0.217,-12.226,-2.908e-5,12.226,4.712,1.91,0.217,45,-1.557e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.818,1.571,288.06,1.012e5,1.223,340.334,0.012,1.197e5,0.025,4.909e-4,0.212,0.22,0</datapoint>
+          <datapoint>12.72,13.026,13.026,-4.165,4.563,-4.095e-4,0.153,-12.627,-2.908e-5,12.627,4.712,1.864,0.153,45,-1.608e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.8,1.571,288.065,1.012e5,1.224,340.338,0.012,1.197e5,0.025,4.909e-4,0.212,0.22,0</datapoint>
+          <datapoint>12.932,12.141,12.141,-4.165,4.55,3.637e-4,0.121,-13.02,-2.908e-5,13.02,4.712,1.832,0.121,45,-1.658e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.781,1.571,288.071,1.012e5,1.224,340.341,0.012,1.197e5,0.025,4.909e-4,0.212,0.22,0</datapoint>
+          <datapoint>13.145,11.257,11.257,-4.165,4.54,0.008,0.392,-13.406,-2.908e-5,13.406,4.712,1.806,0.392,45,-1.707e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.64,1.571,288.077,1.012e5,1.224,340.345,0.012,1.198e5,0.025,4.909e-4,0.212,0.221,0</datapoint>
+          <datapoint>13.357,10.372,10.372,-4.163,4.506,-5.468e-4,0.356,-13.781,-2.908e-5,13.781,4.712,1.723,0.356,45,-1.755e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.572,1.571,288.083,1.012e5,1.224,340.348,0.012,1.197e5,0.025,4.909e-4,0.212,0.221,0</datapoint>
+          <datapoint>13.569,9.488,9.488,-4.164,4.478,-0.003,0.238,-14.139,-2.908e-5,14.139,4.712,1.648,0.238,45,-1.801e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.749,1.571,288.088,1.012e5,1.224,340.352,0.012,1.197e5,0.025,4.909e-4,0.212,0.221,0</datapoint>
+          <datapoint>13.782,8.604,8.604,-4.164,4.497,0.015,0.578,-14.494,-2.908e-5,14.494,4.712,1.698,0.578,45,-1.846e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.602,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.943,1.571,288.094,1.012e5,1.224,340.355,0.012,1.199e5,0.025,4.909e-4,0.212,0.221,0</datapoint>
+          <datapoint>13.994,7.72,7.72,-4.161,4.542,-0.013,0.267,-14.868,-2.908e-5,14.868,4.712,1.821,0.267,45,-1.893e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.934,1.571,288.1,1.012e5,1.224,340.358,0.012,1.196e5,0.025,4.909e-4,0.213,0.221,0</datapoint>
+          <datapoint>14.207,6.835,6.835,-4.164,4.567,0.013,0.555,-15.261,-2.908e-5,15.261,4.712,1.877,0.555,45,-1.943e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.602,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.113,1.571,288.106,1.012e5,1.224,340.362,0.012,1.199e5,0.025,4.909e-4,0.212,0.222,0</datapoint>
+          <datapoint>14.419,5.951,5.951,-4.161,4.615,0.012,0.726,-15.672,-2.908e-5,15.672,4.712,1.995,0.726,45,-1.996e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.603,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.303,1.571,288.111,1.013e5,1.224,340.365,0.012,1.199e5,0.025,4.909e-4,0.212,0.222,0</datapoint>
+          <datapoint>14.632,5.067,5.067,-4.158,4.681,-0.02,0.329,-16.112,-2.908e-5,16.112,4.712,2.15,0.328,45,-2.052e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.599,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.289,1.571,288.117,1.013e5,1.224,340.369,0.012,1.196e5,0.025,4.909e-4,0.213,0.222,0</datapoint>
+          <datapoint>14.844,4.183,4.183,-4.163,4.717,-0.004,0.13,-16.577,-2.908e-5,16.577,4.712,2.219,0.13,45,-2.111e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.275,1.571,288.123,1.013e5,1.225,340.372,0.012,1.197e5,0.025,4.909e-4,0.212,0.222,0</datapoint>
+          <datapoint>15.057,3.299,3.299,-4.164,4.731,0.001,0.169,-17.051,-2.908e-5,17.051,4.712,2.247,0.169,45,-2.171e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.175,1.571,288.129,1.013e5,1.225,340.376,0.012,1.197e5,0.025,4.909e-4,0.212,0.222,0</datapoint>
+          <datapoint>15.269,2.415,2.415,-4.163,4.714,0.013,0.522,-17.524,-2.908e-5,17.524,4.712,2.211,0.521,45,-2.232e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.602,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.99,1.571,288.134,1.013e5,1.225,340.379,0.012,1.199e5,0.025,4.909e-4,0.212,0.223,0</datapoint>
+          <datapoint>15.481,1.531,1.531,-4.16,4.661,-0.011,0.19,-17.982,-2.908e-5,17.982,4.712,2.1,0.19,45,-2.29e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.6,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,2.02,1.571,288.14,1.013e5,1.225,340.383,0.012,1.197e5,0.025,4.909e-4,0.368,0.223,0</datapoint>
+          <datapoint>15.849,0,0,-4.165,4.633,0.01,0.197,-18.742,-2.908e-5,18.742,4.712,2.03,0.197,45,-2.387e-4,NaN,NaN,NaN,NaN,0.573,1.571,0.061,0.013,9.661e-4,9.877e-6,9.806,0,0.241,-9.649,0,0,0.601,115.2,0,115.2,0,115.2,NaN,NaN,NaN,NaN,NaN,NaN,NaN,NaN,1.947,1.571,288.15,1.013e5,1.225,340.389,0.012,1.198e5,0.025,4.909e-4,NaN,0.223,0</datapoint>
+        </databranch>
+      </flightdata>
+    </simulation>
+  </simulations>
+  <photostudio>
+  </photostudio>
+  <docprefs>
+    <docmaterials>
+      <material>BULK|Cardboard|680.0|Custom</material>
+      <material>LINE|Elastic cord (round 2mm, 1/16 in)|0.0018|Custom</material>
+      <material>BULK|Polystyrene|1050.0|Custom</material>
+      <material>SURFACE|Ripstop nylon|0.067|Custom</material>
+    </docmaterials>
+  </docprefs>
+</openrocket>
