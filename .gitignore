@@ -1,0 +1,49 @@
+# ─── Entorno Virtual ───────────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ─── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+dist/
+build/
+*.spec
+
+# ─── Ejecutables compilados ────────────────────────────────────────────────────
+*.exe
+
+# ─── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+temp_simulation.ipynb
+
+# ─── Archivos grandes / temporales ─────────────────────────────────────────────
+*.zip
+*.nc
+*.log
+output*.txt
+test2_out.txt
+serializer.log
+reporte_mision_urgente.txt
+
+# ─── Archivos de diseño (opcionales, pueden ser grandes) ───────────────────────
+# Comenta estas líneas si quieres subir los .ork de ejemplo
+# disenos/*.ork
+
+# ─── IDE / VSCode ──────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+pyrightconfig.json
+
+# ─── OpenRocket extraído ───────────────────────────────────────────────────────
+.ork_extract/
+
+# ─── OS ────────────────────────────────────────────────────────────────────────
+Thumbs.db
+.DS_Store
+desktop.ini
+*.lnk
