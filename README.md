@@ -47,9 +47,9 @@ Antes de ejecutar la aplicación, asegúrate de tener instalado:
 
 ## Descarga e Instalación
 
-1. Descarga el archivo `rocketpy_ccte.exe` desde la sección [**Releases**](https://github.com/DaniVillalba03/openrocket_to_rocketpy/releases) del repositorio.
-2. Coloca el ejecutable en una carpeta de tu elección (por ejemplo: `C:\Simulaciones\CCTE\`).
-3. ¡Listo! No es necesario instalar nada más.
+1. Descarga todo el código del proyecto (desde el botón verde **"Code" → "Download ZIP"** o clonando el repositorio) y extraelo en una carpeta.
+2. Descarga el archivo `rocketpy_ccte.exe` desde la sección [**Releases**](https://github.com/DaniVillalba03/openrocket_to_rocketpy/releases).
+3. Coloca el ejecutable **en la carpeta principal del proyecto** (junto a las carpetas `scripts`, `disenos`, etc.).
 
 > **Importante:** La primera vez que lo ejecutes, Windows puede mostrar una advertencia de SmartScreen.  
 > Haz clic en **"Más información" → "Ejecutar de todas formas"** para continuar.
@@ -96,9 +96,9 @@ Se abrirá la ventana principal de la aplicación:
 
 ### Paso 3 — Cargar el archivo `.ork`
 
-Haz clic en el botón **"Seleccionar archivo .ork"** y navega hasta el archivo `.ork` exportado desde OpenRocket.
+Haz clic en el botón **"Seleccionar archivo .ork"** y busca el archivo `.ork` que exportaste.
 
-El nombre del archivo seleccionado aparecerá confirmado en la interfaz.
+> **Nota:** Puedes elegir el archivo desde cualquier lugar de tu computadora. La aplicación se encargará de copiarlo automáticamente a la carpeta `disenos/` para procesarlo.
 
 ---
 
